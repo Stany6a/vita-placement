@@ -127,7 +127,7 @@ h2 {
 .two-column {
   display: grid;
   grid-template-columns: 53% 47%;
-  height: clamp(520px, 46vw, 670px);
+  height: clamp(430px, 38vw, 560px);
   min-height: 0;
   border-top: 1px solid var(--line);
 }

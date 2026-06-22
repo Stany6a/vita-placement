@@ -127,7 +127,9 @@ h2 {
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  min-height: 34svh;
+.two-column {
+    min-height: 22svh;
+}
   border-top: 1px solid var(--line);
 }
 

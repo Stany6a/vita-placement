@@ -127,7 +127,7 @@ h2 {
 .two-column {
   display: grid;
   grid-template-columns: 47% 53%;
-  height: 360px;
+  height: clamp(430px, 38vw, 560px);
   min-height: 0;
   border-top: 1px solid var(--line);
 }
@@ -138,7 +138,7 @@ h2 {
 
 .image-block {
   position: relative;
-  height: 360px;
+  height: 100%;
   min-height: 0;
   background: var(--panel);
   overflow: hidden;
@@ -150,7 +150,6 @@ h2 {
   height: 100%;
   object-fit: cover;
 }
-
 .text-block {
   height: 360px;
   min-height: 0;

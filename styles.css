@@ -197,15 +197,15 @@ h2 {
   grid-template-columns: 1fr auto;
   gap: 2rem;
 
-  min-height: 470px;
+  min-height: 520px;
   padding: clamp(4.7rem, 8.2vw, 7.3rem)
            clamp(2rem, 6vw, 6rem);
 
   background-image:
     linear-gradient(rgba(247, 241, 232, 0.35), rgba(247, 241, 232, 0.35)),
     url("./hero_back45.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 115%;
+background-position: center 65%;
   background-repeat: no-repeat;
 
   color: var(--text);

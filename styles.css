@@ -197,10 +197,10 @@ h2 {
   grid-template-columns: 1fr auto;
   gap: 2rem;
 
- .site-footer {
-    padding: clamp(5.8rem, 9vw, 8.5rem)
-             clamp(2rem, 6vw, 6rem);
-}
+  min-height: 470px;
+  padding: clamp(4.7rem, 8.2vw, 7.3rem)
+           clamp(2rem, 6vw, 6rem);
+
   background-image:
     linear-gradient(rgba(247, 241, 232, 0.35), rgba(247, 241, 232, 0.35)),
     url("./hero_back45.png");

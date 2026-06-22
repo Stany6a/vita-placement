@@ -131,8 +131,13 @@ h2 {
   min-height: 0;
   border-top: 1px solid var(--line);
 }
+.two-column:nth-of-type(1),
 .two-column:nth-of-type(3) {
   grid-template-columns: 53% 47%;
+}
+
+.two-column:nth-of-type(2) {
+  grid-template-columns: 47% 53%;
 }
 
 .image-block {

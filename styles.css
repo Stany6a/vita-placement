@@ -192,7 +192,26 @@ h2 {
 
 /* 8. FOOTER */
 
-padding: clamp(3.8rem, 7vw, 6.2rem) clamp(2rem, 6vw, 6rem);
+.site-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+
+  padding: clamp(3.8rem, 7vw, 6.2rem)
+           clamp(2rem, 6vw, 6rem);
+
+  background-image:
+    linear-gradient(rgba(247, 241, 232, 0.35), rgba(247, 241, 232, 0.35)),
+    url("./hero_back45.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: var(--text);
+
+  position: relative;
+  overflow: hidden;
+}
 
 .site-footer h2 {
   font-size: clamp(2.3rem, 5vw, 4.8rem);
@@ -200,9 +219,12 @@ padding: clamp(3.8rem, 7vw, 6.2rem) clamp(2rem, 6vw, 6rem);
 
 .site-footer p {
   margin: 1rem 0 0;
-  color: rgba(255, 250, 242, 0.78);
+  color: var(--muted);
 }
 
+.site-footer a {
+  color: var(--text);
+}
 .site-footer address {
   align-self: center;
   font-style: normal;

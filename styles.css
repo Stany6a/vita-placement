@@ -197,8 +197,8 @@ h2 {
   grid-template-columns: 1fr auto;
   gap: 2rem;
 
-  padding: clamp(3.8rem, 7vw, 6.2rem)
-           clamp(2rem, 6vw, 6rem);
+ padding: clamp(4.2rem, 7.5vw, 6.6rem)
+         clamp(2rem, 6vw, 6rem);
 
   background-image:
     linear-gradient(rgba(247, 241, 232, 0.35), rgba(247, 241, 232, 0.35)),

@@ -124,22 +124,18 @@ h2 {
 
 /* 2–7 MAIN GRID */
 
-.two-column {
+..two-column {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-.two-column {
-    min-height: 22svh;
-}
+  grid-template-columns: 47% 53%;
+  height: 430px;
   border-top: 1px solid var(--line);
 }
-
 .image-block {
   position: relative;
-  min-height: 340px;
+  height: 100%;
   background: var(--panel);
   overflow: hidden;
 }
-
 .image-block img {
   width: 100%;
   height: 100%;

@@ -80,11 +80,12 @@ img {
 }
 
 .hero-vita {
-    font-size: clamp(4rem, 9vw, 9rem);
+    font-family: "Nunito Sans", Arial, sans-serif;
+    font-size: 144pt;
+    font-weight: 300;
     letter-spacing: 0.13em;
     color: rgba(143, 80, 44, 0.55);
 }
-
 .hero-placement {
     margin-top: -0.35rem;
     font-size: clamp(1.4rem, 2.8vw, 2.65rem);
@@ -100,9 +101,13 @@ img {
 .hero h1 {
     margin: 0;
     max-width: 100%;
+    font-family: Lato, Arial, sans-serif;
     font-weight: 300;
-    line-height: 1.05;
-    font-size: clamp(3rem, 7vw, 7rem);
+ font-size: clamp(2rem, 3.2vw, 3.1rem);
+    line-height: 1.08;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--text);
 }
 
 .text-block h2 {

@@ -37,20 +37,25 @@ img {
 /* 1. HERO */
 
 .hero {
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  padding: clamp(2rem, 6vw, 6rem);
-  background-image:
-    linear-gradient(rgba(247, 241, 232, 0.35), rgba(247, 241, 232, 0.35)),
-    url("./hero_back45.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    background-image:
+        linear-gradient(rgba(247,241,232,0.35), rgba(247,241,232,0.35)),
+        url("./hero_back45.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
-
-.hero-content {
-  max-width: 760px;
+..hero-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 35% 35%;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .logo {

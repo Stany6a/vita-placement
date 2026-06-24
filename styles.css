@@ -37,7 +37,6 @@ img {
 /* 1. HERO */
 
 .hero {
-  .hero {
     min-height: 100svh;
     display: flex;
     align-items: center;

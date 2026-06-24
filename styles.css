@@ -50,12 +50,23 @@ img {
     background-position: center;
     background-repeat: no-repeat;
 }
-..hero-content {
-    width: 100%;
+.hero-content {
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 35% 35%;
-    justify-content: space-between;
+    column-gap: 10%;
     align-items: start;
+}
+  .hero-left {
+    width: 100%;
+}
+
+.hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .logo {
@@ -63,20 +74,21 @@ img {
   line-height: 1;
 }
 
-.logo-vita {
-  font-family: Alata, Arial, sans-serif;
-  font-size: clamp(2.6rem, 7vw, 6rem);
-  letter-spacing: 0.13em;
-  color: rgba(143, 80, 44, 0.55);
+.hero-logo {
+    line-height: 1;
+    text-align: center;
 }
 
-.logo-subtitle {
-  margin-top: -0.35rem;
-  font-size: clamp(1rem, 2vw, 1.35rem);
-  letter-spacing: 0.08em;
+.hero-vita {
+    font-size: clamp(4rem, 9vw, 9rem);
+    letter-spacing: 0.13em;
+    color: rgba(143, 80, 44, 0.55);
 }
 
-.eyebrow {
+.hero-placement {
+    margin-top: -0.35rem;
+    font-size: clamp(1.4rem, 2.8vw, 2.65rem);
+}
   margin: 0 0 1rem;
   font-family: Alata, Arial, sans-serif;
   font-size: 0.78rem;

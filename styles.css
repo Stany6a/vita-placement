@@ -69,11 +69,6 @@ img {
     align-items: flex-start;
 }
 
-.logo {
-  margin-bottom: clamp(2rem, 5vw, 4rem);
-  line-height: 1;
-}
-
 .hero-logo {
     line-height: 1;
     text-align: center;
@@ -89,13 +84,6 @@ img {
 .hero-placement {
     margin-top: -0.35rem;
     font-size: clamp(1.4rem, 2.8vw, 2.65rem);
-}
-  margin: 0 0 1rem;
-  font-family: Alata, Arial, sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--accent-dark);
 }
 
 .hero h1 {

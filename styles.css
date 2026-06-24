@@ -99,14 +99,15 @@ img {
 
 .hero h1 {
     margin: 0;
-    max-width: 100%;
+    max-width: 420px;
+
     font-family: Lato, Arial, sans-serif;
     font-weight: 300;
- font-size: clamp(2rem, 3.2vw, 3.1rem);
+    font-size: 32px;
     line-height: 1.08;
-    text-transform: none;
     letter-spacing: 0;
-color: #5F574C;
+
+    color: #5F574C;
 }
 
 .text-block h2 {
@@ -116,12 +117,16 @@ color: #5F574C;
     font-size: clamp(1.8rem, 3vw, 3.2rem);
 }
 .hero-lead {
-  max-width: 660px;
-  margin: 1.5rem 0 2rem;
-  font-size: clamp(1.2rem, 2.2vw, 1.65rem);
-color: #5F574C;
-}
+    max-width: 430px;
+    margin: 1.4rem 0 2rem;
 
+    font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.45;
+
+    color: #5F574C;
+}
 /* BUTTONS */
 
 .button {

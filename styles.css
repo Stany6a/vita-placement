@@ -123,17 +123,12 @@ h2 {
 }
 
 /* 2–7 MAIN GRID */
-
 .two-column {
-  display: grid;
-  grid-template-columns: 53% 47%;
-  height: clamp(430px, 38vw, 560px);
-  min-height: 0;
-  border-top: 1px solid var(--line);
-}
-.two-column:nth-of-type(1),
-.two-column:nth-of-type(3) {
-  grid-template-columns: 53% 47%;
+    display: grid;
+    grid-template-columns: 52% 48%;
+    height: clamp(430px, 38vw, 560px);
+    min-height: 0;
+    border-top: 1px solid var(--line);
 }
 
 .two-column:nth-of-type(2) {

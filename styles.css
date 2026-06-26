@@ -104,7 +104,7 @@ img {
     max-width: 420px;
 
     font-family: Lato, Arial, sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 33px;
     line-height: 1.08;
     letter-spacing: 0;
@@ -120,7 +120,7 @@ img {
 }
 .hero-lead {
     max-width: 400px;
-    margin: 1.4rem 0 2rem;
+    margin: 1.9rem 0 2.7rem;
 
     font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;

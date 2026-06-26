@@ -236,16 +236,34 @@ background-position: center 65%;
 }
 
 .site-footer h2 {
-  font-size: clamp(2.3rem, 5vw, 4.8rem);
+    margin: 0;
+    max-width: 420px;
+
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.08;
+    letter-spacing: 0;
+
+    color: #5F574C;
 }
 
 .site-footer p {
-  margin: 1rem 0 0;
-  color: var(--muted);
-}
+    max-width: 400px;
+    margin: 1.2rem 0 0;
 
+    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.42;
+    color: #555046;
+}
 .site-footer a {
-  color: var(--text);
+    color: #555046;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    color: #8f502c;
 }
 .site-footer address {
   align-self: center;
@@ -253,13 +271,11 @@ background-position: center 65%;
   text-align: right;
 }
 
-.site-footer a {
-  color: #fffaf2;
-}
-
 .copyright {
-  grid-column: 1 / -1;
-  font-size: 0.9rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #756455;
 }
 
 /* MOBILE */

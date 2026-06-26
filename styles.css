@@ -65,8 +65,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+  transform: translateX(6vw);
 }
-
 .hero-logo {
     display: grid;
     place-items: center;

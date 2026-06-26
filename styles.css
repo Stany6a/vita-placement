@@ -112,7 +112,7 @@ img {
     color: #5F574C;
 }
 
-text-block h2 {
+.text-block h2 {
     margin: 0;
     max-width: 520px;
     font-family: Lato, Arial, sans-serif;
@@ -183,7 +183,7 @@ text-block h2 {
   background: var(--bg);
 }
 
-text-block p {
+.text-block p {
   
     max-width: 400px;
     margin: 2.4rem 0 0;
@@ -198,10 +198,6 @@ text-block p {
   margin-bottom: 0.8rem;
 }
 
-.text-block h2 {
-  max-width: 620px;
-  font-size: clamp(1.8rem, 3vw, 3.2rem);
-}
 
 .image-with-button {
   position: relative;

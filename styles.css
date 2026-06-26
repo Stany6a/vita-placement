@@ -119,8 +119,8 @@ img {
     font-size: clamp(1.8rem, 3vw, 3.2rem);
 }
 .hero-lead {
-    max-width: 400px;
-    margin: 1.9rem 0 2.7rem;
+    max-width: 370px;
+    margin: 2.25rem 0 3.05rem;
 
     font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;

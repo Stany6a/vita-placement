@@ -100,16 +100,11 @@ img {
     z-index: 2;
 }
 .hero h1 {
-    margin: 0;
-    max-width: 420px;
-
     font-family: Lato, Arial, sans-serif;
-    font-weight: 500;    
-    font-size: 33px;       
+    font-weight: 500;  
+    font-size: 33px;    
     line-height: 1.08;
-    letter-spacing: 0;
-
-    color: #5F574C;
+    color: #554D43;     
 }
 
 .text-block h2 {
@@ -120,14 +115,14 @@ img {
 }
 .hero-lead {
     max-width: 430px;
-    margin: 1.4rem 0 2rem;
+    margin: 1.2rem 0 2rem;
 
     font-family: "Avenir Next", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;      
     font-size: 18px;
     line-height: 1.45;
 
-    color: #5F574C;
+    color: #555046
 }
 /* BUTTONS */
 

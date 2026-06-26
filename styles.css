@@ -119,13 +119,13 @@ img {
     font-size: clamp(1.8rem, 3vw, 3.2rem);
 }
 .hero-lead {
-    max-width: 390px;     
+    max-width: 385px;
     margin: 1.4rem 0 2rem;
 
-  font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
     font-size: 18px;
-    line-height: 1.42;    
+    line-height: 1.42;
 
     color: #555046;
 }

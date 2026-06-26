@@ -95,7 +95,7 @@ img {
     font-size: clamp(1.7rem, 2.7vw, 2.7rem);
     font-weight: 400;
     letter-spacing: 0.01em;
-    color: #4F463D;
+    color: #5F574C;
 
     z-index: 2;
 }
@@ -109,7 +109,7 @@ img {
     line-height: 1.08;
     letter-spacing: 0;
 
-    color: #554D43;
+    color: #5F574C;
 }
 
 .text-block h2 {

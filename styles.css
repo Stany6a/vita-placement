@@ -77,10 +77,10 @@ img {
 
 .hero-vita {
     font-family: "Nunito Sans", Arial, sans-serif;
-    font-size: clamp(5rem, 9vw, 9rem);
+    font-size: clamp(5.5rem, 10vw, 9.8rem);
     font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #A79B8C;
+    letter-spacing: 0.01em;
+    color: #9C9184;
 }
 
 .hero-placement {

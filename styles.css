@@ -188,9 +188,23 @@ img {
     flex-direction: column;
     justify-content: center;
 
-    padding: 4rem 7vw;
+    padding: 4rem 10%;
 
     background: var(--bg);
+}
+
+.text-block h2,
+.text-block p {
+    width: 100%;
+    max-width: 420px;
+}
+.two-column:nth-of-type(2) .text-block {
+    align-items: flex-end;
+}
+
+.two-column:nth-of-type(1) .text-block,
+.two-column:nth-of-type(3) .text-block {
+    align-items: flex-start;
 }
 .text-block .eyebrow {
   margin-bottom: 0.8rem;
@@ -289,12 +303,6 @@ img {
   text-align: right;
 }
 
-.copyright {
-    margin-top: auto;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    color: #756455;
-}
 
 /* MOBILE */
 

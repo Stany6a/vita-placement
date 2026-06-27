@@ -344,6 +344,30 @@ img {
     font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
 }
+.social-links {
+    display: flex;
+    gap: 18px;
+    margin-top: 1.6rem;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .75;
+    transition: opacity .25s ease,
+                transform .25s ease;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.social-links img {
+    width: 24px;
+    height: 24px;
+}
 /* MOBILE */
 
 @media (max-width: 760px) {

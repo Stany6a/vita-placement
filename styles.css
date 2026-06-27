@@ -52,14 +52,16 @@ img {
     background-repeat: no-repeat;
 }
 .hero-content {
+ .hero-content {
     width: 88%;
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 35% 32%;
-    column-gap: 21%;
+    grid-template-columns: 38% 30%;
+    column-gap: 18%;
+
     align-items: start;
 }
-
 .hero-left {
     width: 100%;
 }
@@ -121,10 +123,9 @@ img {
     color: #5F574C;
   }
   
-.hero-lead,
-.text-block p {
-    max-width: 400px;
-
+.hero-lead {
+    max-width: 440px;
+}
     font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 20px;

@@ -137,7 +137,8 @@ img {
 }
 
 .text-block p {
-    margin: 2.4rem 0 0;
+    margin: 3.6rem 0 0;
+    line-height: 1.25;
 }
 /* BUTTONS */
 
@@ -196,7 +197,7 @@ img {
 .text-block h2,
 .text-block p {
     width: 100%;
-    max-width: 420px;
+    max-width: 520px;
 }
 .two-column:nth-of-type(2) .text-block {
     align-items: flex-end;

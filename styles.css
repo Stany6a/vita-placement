@@ -315,6 +315,12 @@ img {
     text-align: right;
     align-self: flex-end;
 }
+.hero-lead,
+.text-block p,
+.site-footer p {
+    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+}
 /* MOBILE */
 
 @media (max-width: 760px) {

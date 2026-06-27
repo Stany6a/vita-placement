@@ -52,14 +52,11 @@ img {
     background-repeat: no-repeat;
 }
 .hero-content {
- .hero-content {
     width: 88%;
     margin: 0 auto;
-
     display: grid;
-    grid-template-columns: 38% 30%;
-    column-gap: 18%;
-
+    grid-template-columns: 35% 32%;
+    column-gap: 21%;
     align-items: start;
 }
 .hero-left {

@@ -210,25 +210,47 @@ img {
 /* 8. FOOTER */
 
 .site-footer {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 
-  min-height: 520px;
-  padding: clamp(4.7rem, 8.2vw, 7.3rem)
-           clamp(2rem, 6vw, 6rem);
+    min-height: 520px;
 
-  background-image:
-    linear-gradient(rgba(247, 241, 232, 0.35), rgba(247, 241, 232, 0.35)),
-    url("./hero_back45.png");
-  background-size: 115%;
-background-position: center 65%;
-  background-repeat: no-repeat;
+    padding:
+        clamp(4.7rem, 8.2vw, 7.3rem)
+        10%;
 
-  color: var(--text);
+    background-image:
+        linear-gradient(rgba(247,241,232,.35), rgba(247,241,232,.35)),
+        url("./hero_back45.png");
 
-  position: relative;
-  overflow: hidden;
+    background-size: 115%;
+    background-position: center 65%;
+    background-repeat: no-repeat;
+
+    color: var(--text);
+
+    position: relative;
+    overflow: hidden;
+}
+.site-footer > div {
+    grid-column: 2;
+    justify-self: start;
+    max-width: 420px;
+}
+
+.copyright {
+    grid-column: 1;
+    grid-row: 1;
+
+    align-self: end;
+    justify-self: start;
+
+    margin: 0;
+
+    font-size: .9rem;
+    line-height: 1.4;
+    color: #756455;
 }
 
 .site-footer h2 {

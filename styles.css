@@ -305,11 +305,13 @@ img {
   text-align: right;
 }
 .site-footer h2 + p {
-    margin-top: 2.2rem;
+    margin-top: 2rem;
 }
 
-.site-footer p:not(:first-of-type) {
-    margin-top: 0.8rem;
+.site-footer p:nth-of-type(2),
+.site-footer p:nth-of-type(3),
+.site-footer p:nth-of-type(4) {
+    margin-top: 0.35rem;
 }
 
 

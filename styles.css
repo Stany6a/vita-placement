@@ -51,17 +51,16 @@ img {
     background-position: center 58%;
     background-repeat: no-repeat;
 }
-..hero-content {
+.hero-content {
     width: 88%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 0;
+    grid-template-columns: 35% 32%;
+    column-gap: 21%;
     align-items: start;
 }
 
-.hero-left,
-.hero-right {
+.hero-left {
     width: 100%;
 }
 
@@ -69,6 +68,7 @@ img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    transform: translateX(6vw);
 }
 .hero-logo {
     display: grid;
@@ -192,7 +192,6 @@ img {
 
     background: var(--bg);
 }
-
 .text-block .eyebrow {
   margin-bottom: 0.8rem;
 }

@@ -145,9 +145,11 @@ img {
     align-items: center;
     justify-content: center;
 
+    min-width: 215px;
+    min-height: 50px;
     padding: 0.95rem 2.3rem;
 
-    background: #F3ECE1;
+    background: rgba(243, 236, 225, 0.6);
     border: none;
     border-radius: 0;
 
@@ -155,16 +157,19 @@ img {
     text-decoration: none;
 
     font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,.05);
+    backdrop-filter: blur(2px);
 
     transition: all .25s ease;
 }
 .button:hover {
-    background: #e9dfd1;
+    background: rgba(243, 236, 225, 0.82);
     color: #5F574C;
 }
 .button {

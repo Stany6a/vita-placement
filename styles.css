@@ -55,8 +55,8 @@ img {
     width: 88%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 35% 32%;
-    column-gap: 21%;
+    grid-template-columns: 40% 30%;
+    column-gap: 16%;
     align-items: start;
 }
 .hero-left {
@@ -105,7 +105,7 @@ img {
 
     margin: 0;
 
-    max-width: 600x;
+    max-width: 600px;
 
     font-family: Lato, Arial, sans-serif;
 

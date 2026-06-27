@@ -315,7 +315,14 @@ img {
     margin-top: 0.1rem;
     line-height: 1.25;
 }
+/* Middle section (Making a complex...) */
 
+.two-column:nth-of-type(2) .text-block h2,
+.two-column:nth-of-type(2) .text-block p,
+.two-column:nth-of-type(2) .text-block .button {
+    text-align: right;
+    align-self: flex-end;
+}
 /* MOBILE */
 
 @media (max-width: 760px) {

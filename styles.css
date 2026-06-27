@@ -158,6 +158,10 @@ img {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+.text-button {
+    margin-top: 1.6rem;
+    align-self: flex-end;
+}
 
 /* 2–7 MAIN GRID */
 .two-column {
@@ -211,16 +215,6 @@ img {
   margin-bottom: 0.8rem;
 }
 
-
-.image-with-button {
-  position: relative;
-}
-
-.image-button {
-  position: absolute;
-  left: clamp(1.5rem, 4vw, 4rem);
-  bottom: clamp(1.5rem, 4vw, 4rem);
-}
 
 /* 8. FOOTER */
 

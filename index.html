@@ -158,5 +158,52 @@
 </form>
     </div>
   </div>
+  <script>
+  const openButton = document.getElementById('openRequestForm');
+  const popup = document.getElementById('requestPopup');
+  const closeButton = document.getElementById('closeRequestForm');
+  const form = document.getElementById('requestForm');
+  const popupWindow = document.querySelector('.popup-window');
+
+  function openPopup() {
+    popup.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    popup.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  openButton.addEventListener('click', openPopup);
+  closeButton.addEventListener('click', closePopup);
+
+  popup.addEventListener('click', function(event) {
+    if (event.target === popup) {
+      closePopup();
+    }
+  });
+
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape' && popup.classList.contains('is-open')) {
+      closePopup();
+    }
+  });
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    popupWindow.innerHTML = `
+      <button class="popup-close" type="button" onclick="document.getElementById('requestPopup').classList.remove('is-open'); document.body.style.overflow = '';">×</button>
+
+      <h2>Thank you!</h2>
+      <p>We've received your request and will be in touch as soon as possible. We look forward to speaking with you.</p>
+
+      <button class="thank-you-close" type="button" onclick="document.getElementById('requestPopup').classList.remove('is-open'); document.body.style.overflow = '';">
+        Close
+      </button>
+    `;
+  });
+</script>
 </body>
 </html>

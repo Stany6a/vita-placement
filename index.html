@@ -142,38 +142,21 @@
     <div class="popup-window">
       <button class="popup-close" type="button" id="closeRequestForm">×</button>
 
-      <h2>Request a Call</h2>
-      <p>Please fill in your contact details and we’ll call you back.</p>
+     <h2>Let's Talk</h2>
+     <p>Leave your contact details, and we'll get in touch as soon as possible.</p>
+    <form class="request-form" id="requestForm">
+  <input type="text" name="name" placeholder="Name *" required>
 
-      <form class="request-form" id="requestForm">
-        <div class="form-row">
-          <input type="text" name="firstName" placeholder="First name *" required>
-          <input type="text" name="lastName" placeholder="Last name *" required>
-        </div>
+  <input type="tel" name="phone" placeholder="Phone number *" required>
 
-        <div class="form-row">
-          <input type="tel" name="phone" placeholder="Phone number *" required>
-          <input type="email" name="email" placeholder="Email *" required>
-        </div>
+  <input type="email" name="email" placeholder="Email">
 
-        <select name="bestTime" required>
-          <option value="">Best time to call *</option>
-          <option>Morning</option>
-          <option>Afternoon</option>
-          <option>Evening</option>
-        </select>
-
-        <textarea name="message" placeholder="What would you like to discuss?"></textarea>
-
-        <button type="submit" class="form-submit-btn">
-          Request a Call
-        </button>
-      </form>
+<textarea name="message" placeholder="Tell us a little about your situation (optional)"></textarea>
+  <button type="submit" class="form-submit-btn">
+    Request a Call
+  </button>
+</form>
     </div>
   </div>
-
-</body>
-</html>
-</html>
 </body>
 </html>

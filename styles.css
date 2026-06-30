@@ -44,7 +44,8 @@ img {
     padding: 0 10%;
 
     background-image:
-       linear-gradient(rgba(245,242,236,0.52), rgba(245,242,236,0.52))
+        linear-gradient(rgba(245,242,236,0.38), rgba(245,242,236,0.38)),
+        url("./hero_back45.png");
 
     background-size: 108%;
     background-position: center 58%;
@@ -223,11 +224,11 @@ img {
 
 /* 2–7 MAIN GRID */
 .two-column {
-    display: grid;
-    grid-template-columns: 52% 48%;
-    height: clamp(430px, 38vw, 560px);
-    min-height: 0;
-    border-top: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 52% 48%;
+  height: clamp(430px, 38vw, 560px);
+  min-height: 0;
+  border-top: none;
 }
 .image-block {
   position: relative;
@@ -294,7 +295,9 @@ img {
     padding: 0;
 
     background-image:
-        linear-gradient(rgba(245,242,236,.35), rgba(245,242,236,.35))
+        linear-gradient(rgba(245,242,236,.25), rgba(245,242,236,.25)),
+        url("./hero_back45.png");
+
     background-size: 115%;
     background-position: center 65%;
     background-repeat: no-repeat;
@@ -676,15 +679,16 @@ img {
 ===================================================== */
 
 .how-we-work {
-    display: none;
-    position: relative;
+  display: none;
+  position: relative;
 
-    padding: 90px 10% 100px;
+  padding: 90px 10% 100px;
 
-    background: var(--bg);
+  background: var(--bg);
 
-    border-top: none;
-    border-bottom: none;
+  border-top: none;
+  border-bottom: none;
+  margin: 0;
 }
 .how-we-work.is-open {
     display: block;

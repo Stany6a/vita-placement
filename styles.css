@@ -583,10 +583,16 @@ img {
     padding: 42px 26px 34px;
   }
 
-  .popup-window h2 {
-    font-size: 34px;
-  }
+ .popup-window h2 {
+  margin: 0 0 10px;
 
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 38px;
+  font-weight: 300;
+  line-height: 1.08;
+
+  color: #5F574C;
+}
   .popup-window p {
     font-size: 17px;
   }

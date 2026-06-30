@@ -172,6 +172,44 @@ img {
     background: rgba(243, 236, 225, 0.82);
     color: #5F574C;
 }
+.request-call-btn,
+.form-submit-btn,
+.thank-you-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 215px;
+  min-height: 50px;
+  padding: 0.95rem 2.3rem;
+
+  background: rgba(243, 236, 225, 0.6);
+  border: none;
+  border-radius: 0;
+
+  color: #5F574C;
+  text-decoration: none;
+
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  box-shadow: 0 1px 3px rgba(0,0,0,.05);
+  backdrop-filter: blur(2px);
+
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.request-call-btn:hover,
+.form-submit-btn:hover,
+.thank-you-close:hover {
+  background: rgba(243, 236, 225, 0.82);
+  color: #5F574C;
+}
 .button {
     min-height: 50px;
     min-width: 215px;
@@ -544,39 +582,6 @@ img {
   resize: vertical;
 }
 
-.form-submit-btn,
-.thank-you-close {
-  margin-top: 14px;
-
-  min-height: 50px;
-  min-width: 215px;
-
-  border: none;
-  border-radius: 0;
-
-  background: rgba(243, 236, 225, 0.72);
-  color: #5F574C;
-
-  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  box-shadow: 0 1px 3px rgba(0,0,0,.05);
-  backdrop-filter: blur(2px);
-
-  transition: all .25s ease;
-}
-
-.form-submit-btn:hover,
-.thank-you-close:hover {
-  background: rgba(243, 236, 225, 0.92);
-  color: #8f502c;
-}
-
 @media (max-width: 640px) {
   .popup-window {
     width: min(92vw, 520px);
@@ -660,16 +665,13 @@ img {
 .request-form input:focus,
 .request-form textarea:focus {
   border-bottom-color: #5F574C;
+
+.form-submit-btn {
+  width: 100%;
+  margin-top: 14px;
 }
 
-.form-submit-btn,
 .thank-you-close {
-  color: #5F574C;
-  background: rgba(243, 236, 225, 0.72);
+  margin-top: 14px;
 }
 
-.form-submit-btn:hover,
-.thank-you-close:hover {
-  color: #5F574C;
-  background: rgba(220, 211, 198, 0.9);
-}

@@ -12,6 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Lato:wght@300;400;700&family=Nunito+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -145,10 +146,9 @@
      <h2>Let's Talk</h2>
      <p>Leave your contact details, and we'll get in touch as soon as possible.</p>
     <form class="request-form" id="requestForm">
-  <input type="text" name="name" placeholder="Name *" required>
+ <input type="text" name="name" placeholder="ex: John Smith" required>
 
-  <input type="tel" name="phone" placeholder="Phone number *" required>
-
+<input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
   <input type="email" name="email" placeholder="Email">
 
 <textarea name="message" placeholder="Tell us a little about your situation (optional)"></textarea>
@@ -157,13 +157,22 @@
   </button>
 </form>
     </div>
-  </div>
+   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
   <script>
   const openButton = document.getElementById('openRequestForm');
   const popup = document.getElementById('requestPopup');
   const closeButton = document.getElementById('closeRequestForm');
   const form = document.getElementById('requestForm');
   const popupWindow = document.querySelector('.popup-window');
+  const phoneInput = document.querySelector("#phone");
+
+  window.intlTelInput(phoneInput, {
+    initialCountry: "us",
+    preferredCountries: ["us"],
+    separateDialCode: true
+  });
 
   function openPopup() {
     popup.classList.add('is-open');

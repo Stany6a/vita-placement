@@ -584,42 +584,61 @@ img {
     padding: 42px 26px 34px;
   }
 
- .popup-window h2 {
+.popup-window h2 {
   margin: 0 0 10px;
 
-  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 38px;
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
   font-weight: 300;
-  line-height: 1.08;
+  line-height: 1.2;
 
   color: #5F574C;
 }
   .popup-window p {
     font-size: 17px;
   }
-  /* International phone input */
+ }
+
+/* International phone input */
 
 .iti {
-    width: 100%;
+  width: 100%;
 }
 
 .iti input {
-    width: 100% !important;
+  width: 100% !important;
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #5F574C;
+}
+
+.iti__selected-country,
+.iti__selected-dial-code,
+.iti__selected-flag {
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #5F574C;
 }
 
 .iti--separate-dial-code .iti__selected-flag {
-    background: transparent;
-    border-right: 1px solid rgba(73, 53, 40, 0.15);
+  background: transparent;
+  border-right: 1px solid rgba(73, 53, 40, 0.15);
 }
 
 .iti__selected-flag:hover {
-    background: rgba(247, 241, 232, 0.45);
+  background: rgba(247, 241, 232, 0.45);
 }
 
 .iti__country-list {
-    border: none;
-    box-shadow: 0 18px 40px rgba(73, 53, 40, 0.18);
-    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: #5F574C;
+  border: none;
+  box-shadow: 0 18px 40px rgba(73, 53, 40, 0.18);
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #5F574C;
 }
+
+.iti input::placeholder {
+  color: #B3AAA1;
+  opacity: 1;
 }

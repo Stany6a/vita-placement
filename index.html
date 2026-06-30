@@ -156,12 +156,13 @@
         required
       >
 
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        required
-      >
+     <input
+    type="tel"
+    id="phone"
+    name="phone"
+    placeholder="(555) 123-4567"
+    required
+>
 
       <input
         type="email"
@@ -192,11 +193,13 @@
   const popupWindow = document.querySelector('.popup-window');
   const phoneInput = document.querySelector("#phone");
 
-  window.intlTelInput(phoneInput, {
-    initialCountry: "us",
-    preferredCountries: ["us"],
-    separateDialCode: true
-  });
+window.intlTelInput(phoneInput, {
+  initialCountry: "us",
+  preferredCountries: ["us"],
+  separateDialCode: true,
+  nationalMode: true,
+  autoPlaceholder: "aggressive"
+});
 
   function openPopup() {
     popup.classList.add('is-open');

@@ -246,7 +246,10 @@
   const form = document.getElementById('requestForm');
   const popupWindow = document.querySelector('.popup-window');
   const phoneInput = document.querySelector("#phone");
-
+    
+const openHowButton = document.getElementById('openHowWeWork');
+const howSection = document.getElementById('howWeWork');
+const closeHowButton = document.getElementById('closeHowWeWork');
 window.intlTelInput(phoneInput, {
   initialCountry: "us",
   preferredCountries: ["us"],
@@ -279,7 +282,15 @@ window.intlTelInput(phoneInput, {
       closePopup();
     }
   });
+openHowButton.addEventListener('click', function() {
+  howSection.classList.add('is-open');
+  howSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
 
+closeHowButton.addEventListener('click', function() {
+  howSection.classList.remove('is-open');
+  openHowButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+});
   form.addEventListener('submit', function(event) {
     event.preventDefault();
 

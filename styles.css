@@ -642,3 +642,34 @@ img {
   color: #B3AAA1;
   opacity: 1;
 }
+/* Final popup color polish */
+
+.popup-close {
+  color: #9C9184;
+}
+
+.popup-close:hover {
+  color: #5F574C;
+}
+
+.request-form input,
+.request-form textarea {
+  border-bottom-color: rgba(156, 145, 132, 0.55);
+}
+
+.request-form input:focus,
+.request-form textarea:focus {
+  border-bottom-color: #5F574C;
+}
+
+.form-submit-btn,
+.thank-you-close {
+  color: #5F574C;
+  background: rgba(243, 236, 225, 0.72);
+}
+
+.form-submit-btn:hover,
+.thank-you-close:hover {
+  color: #5F574C;
+  background: rgba(220, 211, 198, 0.9);
+}

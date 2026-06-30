@@ -490,14 +490,13 @@ img {
 .popup-window h2 {
   margin: 0 0 10px;
 
-  font-family: "Cormorant Garamond", Georgia, serif;
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 38px;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 1.08;
 
   color: #5F574C;
 }
-
 .popup-window p {
   margin: 0 0 26px;
 
@@ -596,4 +595,29 @@ img {
   .popup-window p {
     font-size: 17px;
   }
+  /* International phone input */
+
+.iti {
+    width: 100%;
+}
+
+.iti input {
+    width: 100% !important;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+    background: transparent;
+    border-right: 1px solid rgba(73, 53, 40, 0.15);
+}
+
+.iti__selected-flag:hover {
+    background: rgba(247, 241, 232, 0.45);
+}
+
+.iti__country-list {
+    border: none;
+    box-shadow: 0 18px 40px rgba(73, 53, 40, 0.18);
+    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #5F574C;
+}
 }

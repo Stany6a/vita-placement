@@ -146,19 +146,42 @@
     <h2>Let's talk</h2>
 
     <p>Leave your contact details and we'll be in touch shortly.</p>
+
     <form class="request-form" id="requestForm">
- <input type="text" name="name" placeholder="ex: John Smith" required>
 
-<input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required>
-  <input type="email" name="email" placeholder="Email">
+      <input
+        type="text"
+        name="name"
+    placeholder="John Smith"
+        required
+      >
 
-<textarea name="message" placeholder="Tell us a little about your situation (optional)"></textarea>
-  <button type="submit" class="form-submit-btn">
-    Request a Call
-  </button>
-</form>
-    </div>
-   </div>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+      >
+
+      <input
+        type="email"
+        name="email"
+        placeholder="name@example.com"
+        required
+      >
+
+      <textarea
+        name="message"
+        placeholder="Tell us a little about your situation (optional)"
+      ></textarea>
+
+      <button type="submit" class="form-submit-btn">
+        Request a Call
+      </button>
+
+    </form>
+  </div>
+</div>
 
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
   <script>

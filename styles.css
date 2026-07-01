@@ -684,7 +684,7 @@ img {
 
   padding: 90px 10% 100px;
 
-  background: var(--bg);
+background: #F1ECE5;
 
   border-top: none;
   border-bottom: none;
@@ -787,4 +787,11 @@ img {
     line-height: 1.6;
 
     color: #555046;
+}
+.learn-more-btn {
+    background: rgba(156, 145, 132, 0.42);
+}
+
+.learn-more-btn:hover {
+    background: rgba(156, 145, 132, 0.58);
 }

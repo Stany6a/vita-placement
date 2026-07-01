@@ -681,125 +681,109 @@ img {
 .how-we-work {
   display: none;
   position: relative;
-
-  padding: 90px 10% 100px;
-
-background: #F1ECE5;
-
-  border-top: none;
-  border-bottom: none;
+  padding: 48px 5.5% 58px;
+  background: #F1ECE5;
   margin: 0;
 }
+
 .how-we-work.is-open {
-    display: block;
+  display: block;
 }
 
 .how-close {
-    position: absolute;
-    top: 34px;
-    right: 10%;
-
-    border: none;
-    background: transparent;
-
-    cursor: pointer;
-
-    font-size: 34px;
-    line-height: 1;
-
-    color: #9C9184;
-
-    transition: .25s ease;
-}
-
-.how-close:hover {
-    color: #5F574C;
+  position: absolute;
+  top: 28px;
+  right: 5.5%;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  color: #9C9184;
 }
 
 .how-intro {
-    max-width: 760px;
-    margin-bottom: 52px;
+  max-width: 620px;
+  margin-bottom: 42px;
 }
+
 .how-intro h2 {
-    margin: 0 0 28px;
-
-    font-family: Lato, sans-serif;
-    font-size: 48px;
-    font-weight: 700;
-
-    color: #5F574C;
+  margin: 0 0 18px;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.08;
+  color: #5F574C;
 }
 
-.how-steps p {
-    position: relative;
-    z-index: 1;
-
-    max-width: 220px;
-
-    font-family: "Avenir Light", Avenir, sans-serif;
-    font-size: 18px;
-    line-height: 1.28;
-
-    color: #555046;
+.how-intro p {
+  max-width: 620px;
+  margin: 0;
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.28;
+  color: #555046;
 }
 
 .how-steps {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(220px, 1fr));
-    gap: 26px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+  align-items: start;
 }
 
 .how-steps article {
-    position: relative;
+  position: relative;
+  min-width: 0;
 }
 
 .how-steps span {
-    position: absolute;
-    top: -18px;
-    right: 0;
-
-    font-family: Lato, sans-serif;
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 1;
-
-    color: rgba(156,145,132,.14);
-
-    z-index: 0;
+  position: absolute;
+  top: -12px;
+  right: 0;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  color: rgba(156,145,132,.14);
+  z-index: 0;
 }
 
 .how-steps h3 {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  margin: 0 0 28px;
+  padding-right: 68px;
 
-    margin: 22px 0 12px;
+  font-family: Lato, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.12;
+  white-space: nowrap;
 
-    max-width: 200px;
-
-    font-family: Lato, sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    line-height: 1.15;
-
-    color: #5F574C;
+  color: #5F574C;
 }
 
 .how-steps p {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
+  margin: 0;
 
-    font-family: "Avenir Light", Avenir, sans-serif;
-    font-size: 18px;
-line-height: 1.28;
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.25;
 
-    color: #555046;
+  color: #555046;
+}
+
 .learn-more-btn {
-    background: #F1ECE5;
-    border: 1px solid rgba(95, 87, 76, 0.10);
+  background: #F1ECE5;
+  border: 1px solid rgba(95, 87, 76, 0.10);
 }
 
 .learn-more-btn:hover {
-    background: #ECE5DC;
-    border-color: rgba(95, 87, 76, 0.18);
+  background: #ECE5DC;
+  border-color: rgba(95, 87, 76, 0.18);
 }

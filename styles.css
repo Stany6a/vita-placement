@@ -743,8 +743,8 @@ background: #F1ECE5;
 
 .how-steps {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 44px;
+    grid-template-columns: repeat(4, minmax(190px, 1fr));
+    gap: 34px;
 }
 
 .how-steps article {
@@ -753,15 +753,14 @@ background: #F1ECE5;
 
 .how-steps span {
     position: absolute;
-    top: -22px;
-    left: 0;
+    top: -24px;
+    right: 0;
 
     font-family: Lato, sans-serif;
     font-size: 72px;
     font-weight: 700;
 
-    color: rgba(156,145,132,.18);
-
+   color: rgba(156,145,132,.14);
     z-index: 0;
 }
 
@@ -784,7 +783,7 @@ background: #F1ECE5;
 
     font-family: "Avenir Light", Avenir, sans-serif;
     font-size: 18px;
-    line-height: 1.6;
+line-height: 1.28;
 
     color: #555046;
 .learn-more-btn {

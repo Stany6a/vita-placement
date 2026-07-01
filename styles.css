@@ -787,11 +787,12 @@ background: #F1ECE5;
     line-height: 1.6;
 
     color: #555046;
-}
 .learn-more-btn {
-    background: rgba(156, 145, 132, 0.42);
+    background: #F1ECE5;
+    border: 1px solid rgba(95, 87, 76, 0.10);
 }
 
 .learn-more-btn:hover {
-    background: rgba(156, 145, 132, 0.58);
+    background: #ECE5DC;
+    border-color: rgba(95, 87, 76, 0.18);
 }

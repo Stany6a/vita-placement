@@ -718,9 +718,8 @@ background: #F1ECE5;
 
 .how-intro {
     max-width: 760px;
-    margin-bottom: 70px;
+    margin-bottom: 52px;
 }
-
 .how-intro h2 {
     margin: 0 0 28px;
 
@@ -731,20 +730,24 @@ background: #F1ECE5;
     color: #5F574C;
 }
 
-.how-intro p {
-    max-width: 720px;
+.how-steps p {
+    position: relative;
+    z-index: 1;
+
+    max-width: 220px;
 
     font-family: "Avenir Light", Avenir, sans-serif;
-    font-size: 20px;
-    line-height: 1.6;
+    font-size: 18px;
+    line-height: 1.28;
 
     color: #555046;
 }
 
 .how-steps {
     display: grid;
-    grid-template-columns: repeat(4, minmax(190px, 1fr));
-    gap: 34px;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 26px;
+    align-items: start;
 }
 
 .how-steps article {
@@ -753,14 +756,16 @@ background: #F1ECE5;
 
 .how-steps span {
     position: absolute;
-    top: -24px;
+    top: -18px;
     right: 0;
 
     font-family: Lato, sans-serif;
     font-size: 72px;
     font-weight: 700;
+    line-height: 1;
 
-   color: rgba(156,145,132,.14);
+    color: rgba(156,145,132,.14);
+
     z-index: 0;
 }
 
@@ -768,11 +773,14 @@ background: #F1ECE5;
     position: relative;
     z-index: 1;
 
-    margin: 28px 0 18px;
+    margin: 22px 0 12px;
+
+    max-width: 200px;
 
     font-family: Lato, sans-serif;
     font-size: 28px;
     font-weight: 700;
+    line-height: 1.15;
 
     color: #5F574C;
 }

@@ -500,15 +500,14 @@ img {
     letter-spacing: 0.02em;
   }
 
-  .hero-left {
-    order: 2;
-    width: 100%;
-    margin-top: 52px;
+.hero-left {
+  order: 2;
+  width: 100%;
+  margin-top: 90px;
 
-    display: flex;
-    flex-direction: column;
-  }
-
+  display: flex;
+  flex-direction: column;
+}
   .hero h1 {
     max-width: 330px;
     text-align: left;
@@ -516,14 +515,14 @@ img {
     line-height: 1.04;
   }
 
-  .hero-lead {
-    max-width: 300px;
-    margin: 52px 0 420px auto;
+ .hero-lead {
+  max-width: 300px;
+  margin: 34px 0 420px auto;
 
-    text-align: right;
-    font-size: 18px;
-    line-height: 1.32;
-  }
+  text-align: right;
+  font-size: 18px;
+  line-height: 1.32;
+}
 
   .two-column {
     grid-template-columns: 1fr;

@@ -961,3 +961,63 @@ img {
     font-size: 24px;
     line-height: 1;
 }
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+    padding: 34px 26px 44px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .hero-video {
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .hero-right {
+    order: 1;
+    transform: none;
+    width: 100%;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .hero-logo {
+    transform: scale(0.72);
+  }
+
+  .hero-left {
+    order: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 18px;
+  }
+
+  .hero h1 {
+    max-width: 320px;
+    font-size: 42px;
+    line-height: 1.02;
+  }
+
+  .hero-lead {
+    max-width: 300px;
+    margin: 34px 0 310px;
+    font-size: 21px;
+    line-height: 1.28;
+  }
+
+  .hero .btn {
+    margin-top: 0;
+  }
+}

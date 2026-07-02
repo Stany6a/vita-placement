@@ -462,33 +462,92 @@ img {
 /* MOBILE */
 
 @media (max-width: 760px) {
+  
   .hero {
     min-height: 92svh;
     padding: 2rem 1.25rem;
     background-position: center;
   }
+    .hero-video {
+    position: fixed;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  .hero-content {
+    width: 100%;
+    min-height: 150svh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-right {
+    order: 1;
+    transform: none;
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  .hero-logo {
+    transform: scale(1.22);
+    transform-origin: center;
+  }
+
+  .hero-placement {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .hero-left {
+    order: 2;
+    width: 100%;
+    margin-top: 52px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    max-width: 330px;
+    text-align: left;
+    font-size: 36px;
+    line-height: 1.04;
+  }
+
+  .hero-lead {
+    max-width: 300px;
+    margin: 52px 0 420px auto;
+
+    text-align: right;
+    font-size: 18px;
+    line-height: 1.32;
+  }
 
   .two-column {
-  grid-template-columns: 1fr;
-  height: auto;
-}
- .image-block {
-  height: 320px;
-}
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .image-block {
+    height: 320px;
+  }
+
   .text-block {
     padding: 3rem 1.25rem;
   }
 
-.site-footer {
+  .site-footer {
     grid-template-columns: 1fr;
     padding: 0;
-}
+  }
 
-.site-footer > div,
-.copyright {
+  .site-footer > div,
+  .copyright {
     grid-column: 1;
     padding: 3rem 1.25rem;
-}
+  }
 }
 /* Popup request form */
 
@@ -961,65 +1020,4 @@ img {
     font-size: 24px;
     line-height: 1;
 }
-@media (max-width: 768px) {
-  .hero {
-    min-height: 150svh;
-    padding: 42px 28px 70px;
-    align-items: flex-start;
-  }
 
-  .hero-video {
-    position: fixed;
-    object-fit: cover;
-    object-position: center center;
-  }
-
-  .hero-content {
-    width: 100%;
-    min-height: 150svh;
-
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .hero-right {
-    order: 1;
-    transform: none;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .hero-logo {
-    transform: scale(1.05);
-  }
-
-  .hero-left {
-    order: 2;
-    width: 100%;
-    margin-top: 72px;
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  .hero h1 {
-    max-width: 330px;
-    text-align: left;
-    font-size: 38px;
-    line-height: 1.04;
-  }
-
-  .hero-lead {
-    max-width: 300px;
-    margin: 78px 0 420px auto;
-
-    text-align: right;
-    font-size: 18px;
-    line-height: 1.32;
-  }
-
-  .hero .btn {
-    align-self: center;
-  }
-}

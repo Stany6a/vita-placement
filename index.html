@@ -87,9 +87,9 @@
     We simplify the search for senior living and care options so families can focus on what matters most.
   </p>
 
-  <button class="button text-button learn-more-btn" type="button" id="openHowWeWorkMobile">
-    Learn More
-  </button>
+ <button class="button text-button learn-more-btn" type="button" id="openHowWeWork">
+  Learn More
+</button>
 </section>
 
 <section class="mobile-image-section mobile-only" style="background-image: url('Block_6.png');">
@@ -315,7 +315,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
   <script>
-  const openButton = document.getElementById('openRequestForm');
+  const openButtons = document.querySelectorAll('.js-open-request');
   const popup = document.getElementById('requestPopup');
   const closeButton = document.getElementById('closeRequestForm');
   const form = document.getElementById('requestForm');
@@ -343,15 +343,17 @@ window.intlTelInput(phoneInput, {
     document.body.style.overflow = '';
   }
 
-  openButton.addEventListener('click', openPopup);
-  closeButton.addEventListener('click', closePopup);
+openButtons.forEach(function(button) {
+  button.addEventListener('click', openPopup);
+});
 
-  popup.addEventListener('click', function(event) {
-    if (event.target === popup) {
-      closePopup();
-    }
-  });
+closeButton.addEventListener('click', closePopup);
 
+popup.addEventListener('click', function(event) {
+  if (event.target === popup) {
+    closePopup();
+  }
+});
   document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape' && popup.classList.contains('is-open')) {
       closePopup();

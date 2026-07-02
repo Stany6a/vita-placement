@@ -1219,4 +1219,44 @@ img {
     border-radius:2px;
 }
 }
-/* deploy */
+/* final mobile hero override */
+
+@media (max-width: 760px) {
+  .hero-video {
+    object-position: center 58% !important;
+  }
+
+  .hero-right {
+    justify-content: flex-end !important;
+    align-items: center !important;
+    margin-top: 95px !important;
+    padding-right: 18px !important;
+    transform: none !important;
+  }
+
+  .hero-logo {
+    transform: scale(0.92) !important;
+    transform-origin: center !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .hero-left {
+    margin-top: 120px !important;
+    width: 100% !important;
+  }
+
+  .hero h1 {
+    max-width: 340px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    font-size: 34px !important;
+    line-height: 1.08 !important;
+  }
+
+  .mobile-menu-btn {
+    width: 76px !important;
+    height: 52px !important;
+    border-radius: 14px !important;
+  }
+}

@@ -463,24 +463,27 @@ img {
 
 @media (max-width: 760px) {
   
-  .hero {
-    min-height: 92svh;
-    padding: 2rem 1.25rem;
-    background-position: center;
-  }
+ .hero {
+    min-height: 100svh;
+    position: relative;
+    overflow: hidden;
+}
     .hero-video {
-    position: fixed;
-    object-fit: cover;
-    object-position: center center;
-  }
+    position: absolute;
+    inset: 0;
 
-  .hero-content {
     width: 100%;
-    min-height: 150svh;
+    height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+}
+
+ .hero-content {
+    width: 100%;
+    min-height: 100svh;
   }
 
   .hero-right {
@@ -503,7 +506,7 @@ img {
 .hero-left {
   order: 2;
   width: 100%;
-  margin-top: 90px;
+  margin-top: 110px;
 
   display: flex;
   flex-direction: column;
@@ -515,13 +518,18 @@ img {
     line-height: 1.04;
   }
 
- .hero-lead {
-  max-width: 300px;
-  margin: 34px 0 420px auto;
+.intro-section .hero-lead {
+    max-width: 330px;
 
-  text-align: right;
-  font-size: 18px;
-  line-height: 1.32;
+    margin: 0 0 34px;
+
+    text-align: center;
+
+    font-size: 18px;
+    line-height: 1.45;
+}
+  .intro-section .button {
+    width: 220px;
 }
 
   .two-column {
@@ -1018,5 +1026,38 @@ img {
 .social-links i {
     font-size: 24px;
     line-height: 1;
+}
+.mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width:760px){
+
+.mobile-menu-btn{
+    display:flex;
+
+    width:54px;
+    height:54px;
+
+    margin:36px auto 0;
+
+    background:rgba(255,255,255,.42);
+    border:1px solid rgba(95,87,76,.15);
+    border-radius:50%;
+
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    gap:5px;
+
+    backdrop-filter:blur(10px);
+}
+
+.mobile-menu-btn span{
+    width:20px;
+    height:2px;
+    background:#5F574C;
+    border-radius:2px;
+}
 }
 

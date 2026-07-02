@@ -308,22 +308,45 @@ img {
 /* 8. FOOTER */
 
 .site-footer {
+    position: relative;
+    overflow: hidden;
+
     display: grid;
     grid-template-columns: 52% 48%;
 
     min-height: 520px;
-
     padding: 0;
-
-    background-image:
-        linear-gradient(rgba(245,242,236,.25), rgba(245,242,236,.25)),
-        url("./hero_back45.png");
-
-    background-size: 115%;
-    background-position: center 65%;
-    background-repeat: no-repeat;
 }
-.site-footer > div {
+.footer-video {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center 65%;
+
+    transform: scale(1.15);
+
+    z-index: 0;
+}
+
+.footer-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(245,242,236,.25);
+
+    z-index: 1;
+}
+
+.footer-content,
+.copyright {
+    position: relative;
+    z-index: 2;
+}
+.site-footer .footer-content {
     grid-column: 2;
 
     display: flex;

@@ -1260,3 +1260,49 @@ img {
     border-radius: 14px !important;
   }
 }
+@media (max-width: 760px) {
+
+  .hero-logo {
+    position: absolute;
+    top: 18vh;
+    right: 7vw;
+    left: auto;
+    transform: none;
+    text-align: right;
+    z-index: 2;
+  }
+
+  .hero-vita {
+    font-size: clamp(4.8rem, 22vw, 6.6rem);
+  }
+
+  .hero-placement {
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+
+  .hero-video {
+    object-fit: cover;
+    object-position: 68% 58%;
+    transform: scale(1.08);
+  }
+
+  .hero-title {
+    position: absolute;
+    top: 43vh;
+    left: 6vw;
+    right: 18vw;
+    font-size: clamp(2.2rem, 10vw, 3.2rem);
+    line-height: 1.08;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .hero-menu-button {
+    position: absolute;
+    top: 62vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+}
+

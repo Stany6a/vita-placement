@@ -458,7 +458,6 @@ img {
     font-size: 24px;
     line-height: 1;
 }
-
 /* MOBILE */
 
 .mobile-only {
@@ -479,18 +478,18 @@ img {
     min-height: 100svh;
     position: relative;
     overflow: hidden;
-    padding: 2rem 1.25rem;
+    padding: 0;
   }
 
   .hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 58%;
-  z-index: 0;
-}
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 58%;
+    z-index: 0;
+  }
 
   .hero-overlay {
     position: absolute;
@@ -500,156 +499,142 @@ img {
   }
 
   .hero-content {
-    
     position: relative;
     z-index: 2;
-
     min-height: 100svh;
     width: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 40px;
+    display: block;
   }
 
- .hero-right {
-  order: 1;
+  .hero-right {
+    position: absolute;
+    top: 115px;
+    left: 30%;
+    right: 10%;
+    margin: 0;
+    padding: 0;
+    transform: none;
+  }
 
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  .hero-logo {
+    transform: scale(1.08);
+    transform-origin: center;
+    margin: 0;
+    max-width: 100%;
+  }
 
-  margin-top: 95px;
-  padding-right: 18px;
+  .hero-left {
+    position: absolute;
+    top: 355px;
+    left: 5%;
+    right: 5%;
+    margin: 0;
+    width: auto;
+    display: block;
+  }
 
-  transform: none;
-}
+  .hero h1 {
+    max-width: 340px;
+    margin: 0;
+    text-align: left;
+    font-size: 34px;
+    line-height: 1.08;
+  }
 
-.hero-logo {
-  transform: scale(0.92);
-  transform-origin: center;
+  .mobile-menu-btn {
+    position: absolute;
+    top: 34px;
+    right: 5%;
+    z-index: 6;
 
-  margin: 0;
-  max-width: 100%;
-}
- .hero-left {
-  order: 2;
+    width: 58px;
+    height: 50px;
+    margin: 0;
 
-  margin-top: 118px;
+    border: 1px solid rgba(95,87,76,.14);
+    border-radius: 14px;
 
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+    background: rgba(255,250,242,.62);
+    backdrop-filter: blur(10px);
 
- .hero h1 {
-  max-width: 340px;
-  margin: 0 0 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
 
-  text-align: left;
-  font-size: 34px;
-  line-height: 1.08;
-}
-.mobile-menu-btn {
-  display: flex;
-
-  position: absolute;
-  top: 34px;
-  right: 5%;
-  z-index: 5;
-
-  width: 58px;
-  height: 50px;
-
-  margin: 0;
-
-  border: 1px solid rgba(95,87,76,.14);
-  border-radius: 14px;
-
-  background: rgba(255,250,242,.62);
-  backdrop-filter: blur(10px);
-
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5px;
-
-  transition: .25s ease;
-}.mobile-how-it-works {
-  margin: 26px 5% 0;
-  max-width: 90%;
-}
-
-.mobile-how-it-works summary {
-  width: fit-content;
-  list-style: none;
-  cursor: pointer;
-
-  padding: 10px 18px;
-  border: 1px solid rgba(95, 87, 76, 0.34);
-  border-radius: 999px;
-
-  font-family: Lato, Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-
-  color: #5F574C;
-  background: rgba(255,250,242,.62);
-  backdrop-filter: blur(10px);
-}
-
-.mobile-how-it-works summary::-webkit-details-marker {
-  display: none;
-}
-
-.mobile-how-content {
-  margin-top: 28px;
-  padding: 26px 20px 30px;
-
-  background: rgba(245, 242, 236, 0.84);
-  border-top: 1px solid rgba(95, 87, 76, 0.16);
-  border-bottom: 1px solid rgba(95, 87, 76, 0.16);
-}
-
-.mobile-faq-item + .mobile-faq-item {
-  margin-top: 28px;
-}
-
-.mobile-faq-item h2 {
-  margin: 0 0 12px;
-
-  font-family: Lato, Arial, sans-serif;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.2;
-
-  color: #5F574C;
-}
-
-.mobile-faq-item p {
-  margin: 0;
-
-  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  font-weight: 300;
-  line-height: 1.5;
-
-  color: #555046;
-}
-
-.mobile-menu-btn:hover {
+  .mobile-menu-btn:hover {
     background: rgba(255,250,242,.82);
-}
+  }
 
   .mobile-menu-btn span {
     width: 22px;
     height: 2px;
-
     background: #5F574C;
     border-radius: 2px;
-}
+  }
+
+  .mobile-how-section {
+    background: #F5F2EC;
+    padding: 44px 24px 54px;
+  }
+
+  .mobile-how-it-works {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .mobile-how-it-works summary {
+    width: fit-content;
+    list-style: none;
+    cursor: pointer;
+
+    padding: 12px 22px;
+    border: 1px solid rgba(95, 87, 76, 0.22);
+    border-radius: 999px;
+
+    font-family: Lato, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+
+    color: #5F574C;
+    background: rgba(255,250,242,.72);
+  }
+
+  .mobile-how-it-works summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .mobile-how-content {
+    margin-top: 42px;
+  }
+
+  .mobile-faq-item + .mobile-faq-item {
+    margin-top: 42px;
+  }
+
+  .mobile-faq-item h2 {
+    margin: 0 0 18px;
+
+    font-family: Lato, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.08;
+
+    color: #5F574C;
+  }
+
+  .mobile-faq-item p {
+    margin: 0;
+
+    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.45;
+
+    color: #5F574C;
+  }
 
   .mobile-intro {
     padding: 58px 24px 64px;

@@ -237,13 +237,6 @@ img {
   background: rgba(243, 236, 225, 0.82);
   color: #5F574C;
 }
-.button {
-    min-height: 50px;
-    min-width: 215px;
-}
-.button {
-    box-shadow: 0 1px 3px rgba(0,0,0,.05);
-}
 .text-button {
     margin-top: 1.6rem;
     align-self: flex-end;

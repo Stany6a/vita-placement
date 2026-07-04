@@ -580,11 +580,10 @@ img {
 
 .hero-placement {
   font-weight: 500;
-  font-size: clamp(1.7rem, 7vw, 2.25rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(1.55rem, 6.3vw, 2.1rem);
+  letter-spacing: -0.025em;
   transform: translateY(8%);
 }
-
 .hero-left {
 
   position: absolute;

@@ -522,14 +522,14 @@ img {
   }
 
   .hero-right {
-    position: absolute;
-    top: 115px;
-    left: 30%;
-    right: 10%;
-    margin: 0;
-    padding: 0;
-    transform: none;
-  }
+  position: absolute;
+  top: 45px;
+  left: 30%;
+  right: 10%;
+  margin: 0;
+  padding: 0;
+  transform: none;
+}
 
   .hero-logo {
     transform: scale(1.08);
@@ -557,27 +557,28 @@ img {
   }
 
   .mobile-menu-btn {
-    position: absolute;
-    top: 34px;
-    right: 5%;
-    z-index: 6;
+  position: absolute;
+  top: 48px;
+  left: 5%;
+  right: auto;
+  z-index: 6;
 
-    width: 58px;
-    height: 50px;
-    margin: 0;
+  width: 58px;
+  height: 50px;
+  margin: 0;
 
-    border: 1px solid rgba(95,87,76,.14);
-    border-radius: 14px;
+  border: 1px solid rgba(95,87,76,.14);
+  border-radius: 14px;
 
-    background: rgba(255,250,242,.62);
-    backdrop-filter: blur(10px);
+  background: rgba(255,250,242,.62);
+  backdrop-filter: blur(10px);
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 5px;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
 
   .mobile-menu-btn:hover {
     background: rgba(255,250,242,.82);
@@ -590,11 +591,13 @@ img {
     border-radius: 2px;
   }
 
-  .mobile-how-section {
-    background: #F5F2EC;
-    padding: 44px 24px 54px;
-  }
-
+ .mobile-how-section {
+  background: transparent;
+  padding: 0 0 0;
+  margin-top: -230px;
+  position: relative;
+  z-index: 4;
+}
   .mobile-how-it-works {
     max-width: 680px;
     margin: 0 auto;

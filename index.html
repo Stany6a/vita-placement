@@ -86,7 +86,9 @@
       In most cases, our guidance is provided at no cost to families. We are compensated
       by the care community when a family chooses a placement through our referral.
     </p>
-
+<button class="mobile-how-close" type="button" id="mobileHowClose">
+  Close
+</button>
   </div>
 </section>
 <section class="mobile-image-section mobile-only" style="background-image: url('block_2.png');">
@@ -337,6 +339,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"></script>
   <script>
+    
   const openButtons = document.querySelectorAll('.js-open-request');
   const popup = document.getElementById('requestPopup');
   const closeButton = document.getElementById('closeRequestForm');
@@ -429,6 +432,21 @@ closeHowButton.addEventListener('click', function() {
     alert("Unable to send your request. Please try again.");
   }
 });
+    const mobileHowButton = document.getElementById('mobileHowButton');
+const mobileHowPanel = document.getElementById('mobileHowPanel');
+const mobileHowClose = document.getElementById('mobileHowClose');
+
+if (mobileHowButton && mobileHowPanel && mobileHowClose) {
+  mobileHowButton.addEventListener('click', function () {
+    mobileHowPanel.classList.add('is-open');
+    mobileHowPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  mobileHowClose.addEventListener('click', function () {
+    mobileHowPanel.classList.remove('is-open');
+    mobileHowButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+}
 </script>
 </body>
 </html>

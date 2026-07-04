@@ -476,10 +476,9 @@ img {
 
  .hero {
 
-  height: 100dvh;
-
-  min-height: 100dvh;
-
+ .hero {
+  min-height: 100svh;
+  height: 100svh;
   position: relative;
 
   overflow: hidden;
@@ -511,11 +510,9 @@ img {
   position: relative;
 
   z-index: 2;
-
-  height: 100dvh;
-
-  min-height: 100dvh;
-
+.hero-content {
+  height: 100svh;
+  min-height: 100svh;
   width: 100%;
 
   display: block;

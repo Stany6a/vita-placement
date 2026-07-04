@@ -484,7 +484,7 @@ img {
 
   overflow: hidden;
 
-  padding: 0
+  padding: 0;
   }
 
 .hero-video {
@@ -494,10 +494,8 @@ img {
   height: 100%;
   object-fit: cover;
 
-  /* меньше ветка на мобильной */
-  transform: scale(0.88);
-  transform-origin: center center;
-
+    transform: none;
+  object-position: center 50%;
   object-position: center 38%;
   z-index: 0;
 }

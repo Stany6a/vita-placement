@@ -102,7 +102,7 @@ img {
 .hero-vita{
     grid-area:1 / 1;
 
-    font-family:'Nunito Sans',sans-serif;
+    font-family:'Nunito Sans', Arial, sans-serif !important;
     font-weight:800;
     font-size:clamp(6rem,10vw,10.7rem);
 
@@ -117,7 +117,7 @@ img {
 
     white-space:nowrap;
 
-    font-family:'Cormorant Garamond',serif;
+    font-family:'Cormorant Garamond', Georgia, serif !important;
     font-weight:400;
     font-size:clamp(2.2rem,3.4vw,3.35rem);
 

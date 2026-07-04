@@ -488,21 +488,19 @@ img {
   }
 
 .hero-video {
-
   position: absolute;
-
   inset: 0;
-
   width: 100%;
-
-  height: 100dvh;
-
+  height: 100%;
   object-fit: cover;
 
-  object-position: 38% center;
+  /* меньше ветка на мобильной */
+  transform: scale(0.88);
+  transform-origin: center center;
 
+  object-position: center 38%;
   z-index: 0;
-  }
+}
 
   .hero-overlay {
     position: absolute;

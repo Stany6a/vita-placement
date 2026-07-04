@@ -442,12 +442,25 @@ const mobileHowClose = document.getElementById('mobileHowClose');
 if (mobileHowButton && mobileHowPanel && mobileHowClose) {
   mobileHowButton.addEventListener('click', function () {
     mobileHowPanel.classList.add('is-open');
-    mobileHowPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+    mobileHowPanel.style.height = mobileHowPanel.scrollHeight + 'px';
+
+    setTimeout(function () {
+      mobileHowPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 120);
   });
 
   mobileHowClose.addEventListener('click', function () {
-    mobileHowPanel.classList.remove('is-open');
-    mobileHowButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    mobileHowPanel.style.height = mobileHowPanel.scrollHeight + 'px';
+
+    requestAnimationFrame(function () {
+      mobileHowPanel.style.height = '0px';
+      mobileHowPanel.classList.remove('is-open');
+    });
+
+    setTimeout(function () {
+      mobileHowButton.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 250);
   });
 }
 </script>

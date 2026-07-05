@@ -615,7 +615,8 @@ img {
   line-height: 1.08;
 
 }
-.hero-left .button {
+.hero-left .learn-more-btn {
+  display: inline-flex;
   margin-top: 60px;
 }
 

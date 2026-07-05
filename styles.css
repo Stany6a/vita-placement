@@ -603,23 +603,17 @@ img {
 }
 
 .hero h1 {
-
   max-width: 340px;
-
   margin: 0;
-
   text-align: left;
-
   font-size: 34px;
-
   line-height: 1.08;
-
 }
-.hero-left .learn-more-btn {
+
+.hero-left .hero-button {
   display: inline-flex;
-  margin-top: 60px;
+  margin-top: 60px !important;
 }
-
 .mobile-menu-btn {
 
   position: absolute;

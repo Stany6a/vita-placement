@@ -801,16 +801,20 @@ img {
     background: #F5F2EC;
   }
 
-  .mobile-text-section p {
-    max-width: 340px;
-    margin: 0 auto 32px;
+  ..mobile-text-section p {
+  max-width: 340px;
+  margin: 0 0 32px;
 
-    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.45;
-    color: #555046;
-  }
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #555046;
+
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+}
 
   .mobile-text-section .button {
   display: inline-flex !important;

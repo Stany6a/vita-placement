@@ -611,7 +611,8 @@ img {
 }
 
 .hero-left .hero-button {
-  display: inline-flex;
+  display: flex !important;
+  width: 220px;
   margin-top: 60px !important;
 }
 .mobile-menu-btn {
@@ -735,16 +736,18 @@ img {
     text-align: center;
   }
 
-  .mobile-intro p {
-    max-width: 340px;
-    margin: 0 auto 34px;
+  ..mobile-intro p {
+  max-width: 340px;
+  margin: 0 auto 34px;
 
-    font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.45;
-    color: #555046;
-  }
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+
+  color: #5F574C;
+}
 
   .mobile-image-section {
     min-height: 430px;

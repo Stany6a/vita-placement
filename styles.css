@@ -916,15 +916,17 @@ img {
   }
 
   .mobile-hero-text p {
-    max-width: 340px;
-    margin: 0 auto 30px;
+  max-width: 340px;
+  margin: 0 auto 30px;
 
-    font-family: Lato, Arial, sans-serif;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 1.15;
-    color: #5F574C;
-  }
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+
+  color: #5F574C;
+}
 
   .mobile-hero-text .request-call-btn {
     display: flex;

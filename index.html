@@ -248,9 +248,60 @@
     With extensive knowledge of local senior living communities, we narrow countless options into a focused shortlist tailored to your family's unique situation.
   </p>
 
-  <button class="button text-button" type="button">
-    About Vita
-  </button>
+  <button
+  class="button text-button local-guidance-btn"
+  type="button"
+  id="mobileLocalButton">
+  Explore Local Guidance
+</button>
+</section>
+    <section
+  class="mobile-local-panel mobile-only"
+  id="mobileLocalPanel">
+
+  <div class="mobile-local-inner">
+
+    <h2>What areas does Vita Placement Assistance serve?</h2>
+
+    <p>
+     We primarily serve families in Irvine, Newport Beach, Huntington Beach, 
+      Mission Viejo, Laguna Niguel, Anaheim, Orange, Santa Ana, Costa Mesa,
+      Tustin, Fullerton, Yorba Linda, and surrounding Orange County communities
+      and also assist clients in neighboring 
+      communities across Southern California. Our local knowledge 
+      allows us to recommend assisted living, memory care,
+      board and care homes, and other senior living options
+      that match your location, care needs, budget, and lifestyle preferences.
+    </p>
+
+    <h2>Do I need to visit every senior living community myself?</h2>
+
+    <p>
+      No. Families do not need to contact or visit every senior living
+      community on their own. Vita Placement Assistance narrows the search
+      to suitable options based on your loved one’s needs, preferences,
+      location, and budget, helping you focus on the communities most
+      likely to be a good fit.
+    </p>
+
+    <h2>Can Vita help arrange senior living tours?</h2>
+
+    <p>
+      Yes. We help families coordinate tours of selected senior living
+      communities and prepare for the questions that are important to ask.
+      This makes it easier to compare care, services, pricing, atmosphere,
+      and availability before making a decision.
+    </p>
+
+    <button
+      class="mobile-local-close"
+      type="button"
+      id="mobileLocalClose">
+      Close
+    </button>
+
+  </div>
+
 </section>
     <!-- 2 + 3 -->
     <section class="two-column">
@@ -656,6 +707,80 @@ if (
         mobileComplexPanel.scrollHeight;
 
       mobileComplexPanel.style.height =
+        updatedHeight + 'px';
+    }
+  });
+}const mobileLocalButton =
+  document.getElementById('mobileLocalButton');
+
+const mobileLocalPanel =
+  document.getElementById('mobileLocalPanel');
+
+const mobileLocalClose =
+  document.getElementById('mobileLocalClose');
+
+if (
+  mobileLocalButton &&
+  mobileLocalPanel &&
+  mobileLocalClose
+) {
+
+  mobileLocalButton.addEventListener('click', function () {
+
+    if (mobileLocalPanel.classList.contains('is-open')) {
+
+      mobileLocalPanel.style.height =
+        mobileLocalPanel.scrollHeight + 'px';
+
+      requestAnimationFrame(function () {
+        mobileLocalPanel.style.height = '0px';
+        mobileLocalPanel.classList.remove('is-open');
+      });
+
+      return;
+    }
+
+    mobileLocalPanel.classList.add('is-open');
+
+    mobileLocalPanel.style.height =
+      mobileLocalPanel.scrollHeight + 'px';
+
+    setTimeout(function () {
+      mobileLocalPanel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 120);
+  });
+
+  mobileLocalClose.addEventListener('click', function () {
+
+    mobileLocalPanel.style.height =
+      mobileLocalPanel.scrollHeight + 'px';
+
+    requestAnimationFrame(function () {
+      mobileLocalPanel.style.height = '0px';
+      mobileLocalPanel.classList.remove('is-open');
+    });
+
+    setTimeout(function () {
+      mobileLocalButton.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 250);
+  });
+
+  window.addEventListener('resize', function () {
+
+    if (mobileLocalPanel.classList.contains('is-open')) {
+
+      mobileLocalPanel.style.height = 'auto';
+
+      const updatedHeight =
+        mobileLocalPanel.scrollHeight;
+
+      mobileLocalPanel.style.height =
         updatedHeight + 'px';
     }
   });

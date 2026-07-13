@@ -974,6 +974,81 @@ img {
     width: 230px;
     margin: 0 auto;
   }
+}.mobile-hero-text .explore-care-btn {
+  display: inline-flex !important;
+  width: auto !important;
+  min-width: 0;
+  min-height: 50px;
+
+  margin: 36px 0 0 !important;
+  padding: 0.95rem 2.3rem;
+
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  white-space: nowrap;
+
+  color: #5F574C;
+  background: rgba(243,236,225,.60);
+  border: none;
+  border-radius: 0;
+}
+
+.mobile-care-panel {
+  height: 0;
+  overflow: hidden;
+
+  background: #F5F2EC;
+
+  transition: height 0.65s ease;
+}
+
+.mobile-care-inner {
+  padding: 18px 24px 54px;
+}
+
+.mobile-care-inner h2 {
+  margin: 0 0 18px;
+
+  font-family: Lato, Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.12;
+
+  color: #5F574C;
+}
+
+.mobile-care-inner p {
+  margin: 0 0 42px;
+
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.45;
+
+  color: #555046;
+}
+
+.mobile-care-close {
+  display: block;
+  width: 180px;
+  min-height: 48px;
+
+  margin: 4px auto 0;
+
+  border: 1px solid rgba(95,87,76,.18);
+  border-radius: 999px;
+
+  background: rgba(255,250,242,.72);
+
+  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+
+  color: #5F574C;
 }
 /* Popup request form */
 

@@ -801,8 +801,12 @@ img {
     background: #F5F2EC;
   }
 
-  ..mobile-text-section p {
+ .mobile-text-section p {
+  display: block;
   max-width: 340px;
+  height: auto;
+  max-height: none;
+
   margin: 0 0 32px;
 
   font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -811,9 +815,12 @@ img {
   line-height: 1.45;
   color: #555046;
 
-  white-space: normal;
-  overflow: visible;
-  text-overflow: clip;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+
+  -webkit-line-clamp: unset !important;
+  -webkit-box-orient: initial !important;
 }
 
   .mobile-text-section .button {

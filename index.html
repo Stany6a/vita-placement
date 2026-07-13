@@ -188,9 +188,55 @@
     We simplify the search for senior living and care options so families can focus on what matters most.
   </p>
 
- <button class="button text-button learn-more-btn" type="button" >
+ <button
+  class="button text-button learn-more-btn"
+  type="button"
+  id="mobileComplexButton">
   Learn More
 </button>
+</section><section
+  class="mobile-complex-panel mobile-only"
+  id="mobileComplexPanel">
+
+  <div class="mobile-complex-inner">
+
+    <h2>How do I know which senior care option is right?</h2>
+
+    <p>
+      The right senior care option depends on the person’s daily support needs,
+      medical and cognitive condition, preferred environment, location, and
+      budget. Vita Placement Assistance helps families compare local assisted
+      living, memory care, board and care, and other senior living options
+      throughout Southern California.
+    </p>
+
+    <h2>Is senior placement assistance really free for families?</h2>
+
+    <p>
+      Yes. Vita Placement Assistance is 100% free to families. We are compensated
+      by the senior living community after a successful placement, so families
+      do not pay a fee for our guidance, recommendations, or help arranging tours.
+    </p>
+
+    <h2>How much do assisted living, memory care, and board and care homes cost?</h2>
+
+    <p>
+      Senior living costs vary based on the type of care, location, room style,
+      level of assistance, and services included. Assisted living, memory care,
+      and board and care homes may each use different pricing structures. Vita
+      Placement Assistance helps families understand these costs, compare
+      options, and identify communities that fit their care needs and budget.
+    </p>
+
+    <button
+      class="mobile-complex-close"
+      type="button"
+      id="mobileComplexClose">
+      Close
+    </button>
+
+  </div>
+
 </section>
 
 <section class="mobile-image-section mobile-only" style="background-image: url('Block_6.png');">
@@ -536,6 +582,81 @@ if (exploreCareButton && mobileCarePanel && mobileCareClose) {
       const newHeight = mobileCarePanel.scrollHeight;
 
       mobileCarePanel.style.height = newHeight + 'px';
+    }
+  });
+}
+    const mobileComplexButton =
+  document.getElementById('mobileComplexButton');
+
+const mobileComplexPanel =
+  document.getElementById('mobileComplexPanel');
+
+const mobileComplexClose =
+  document.getElementById('mobileComplexClose');
+
+if (
+  mobileComplexButton &&
+  mobileComplexPanel &&
+  mobileComplexClose
+) {
+
+  mobileComplexButton.addEventListener('click', function () {
+
+    if (mobileComplexPanel.classList.contains('is-open')) {
+
+      mobileComplexPanel.style.height =
+        mobileComplexPanel.scrollHeight + 'px';
+
+      requestAnimationFrame(function () {
+        mobileComplexPanel.style.height = '0px';
+        mobileComplexPanel.classList.remove('is-open');
+      });
+
+      return;
+    }
+
+    mobileComplexPanel.classList.add('is-open');
+
+    mobileComplexPanel.style.height =
+      mobileComplexPanel.scrollHeight + 'px';
+
+    setTimeout(function () {
+      mobileComplexPanel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }, 120);
+  });
+
+  mobileComplexClose.addEventListener('click', function () {
+
+    mobileComplexPanel.style.height =
+      mobileComplexPanel.scrollHeight + 'px';
+
+    requestAnimationFrame(function () {
+      mobileComplexPanel.style.height = '0px';
+      mobileComplexPanel.classList.remove('is-open');
+    });
+
+    setTimeout(function () {
+      mobileComplexButton.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }, 250);
+  });
+
+  window.addEventListener('resize', function () {
+
+    if (mobileComplexPanel.classList.contains('is-open')) {
+
+      mobileComplexPanel.style.height = 'auto';
+
+      const updatedHeight =
+        mobileComplexPanel.scrollHeight;
+
+      mobileComplexPanel.style.height =
+        updatedHeight + 'px';
     }
   });
 }

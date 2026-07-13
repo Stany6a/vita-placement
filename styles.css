@@ -958,7 +958,7 @@ img {
 
   .mobile-hero-text p {
   max-width: 340px;
-  margin: 0 auto 30px;
+  margin: 0;
 
   font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -968,13 +968,12 @@ img {
 
   color: #555046;
 }
-
   .mobile-hero-text .request-call-btn {
     display: flex;
     width: 230px;
     margin: 0 auto;
   }
-}.mobile-hero-text .explore-care-btn {
+.mobile-hero-text .explore-care-btn {
   display: inline-flex !important;
   width: auto !important;
   min-width: 0;
@@ -1050,6 +1049,7 @@ img {
 
   color: #5F574C;
 }
+  }
 /* Popup request form */
 
 .popup-overlay {

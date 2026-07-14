@@ -902,7 +902,7 @@ transition:
     margin-left: 0;
     margin-right: 0;
 
-padding: calc(34svh + 28px) 24px 0;
+padding: 34svh 24px 0;
 
     text-align: left;
 
@@ -2011,5 +2011,11 @@ body.menu-open {
     line-height: 1.25;
 
     white-space: normal;
+  }
+}/* MOVE MOBILE FOOTER CONTENT LOWER */
+
+@media (max-width: 760px) {
+  .site-footer .footer-content {
+    transform: translateY(30px);
   }
 }

@@ -839,9 +839,22 @@ img {
 
   white-space: nowrap;
 
-  background: rgba(243,236,225,.60);
+  background: rgba(243,236,225,.85);
   border: none;
   border-radius: 0;
+}.hero-left .hero-button,
+.mobile-hero-text .explore-care-btn,
+.mobile-text-section .button {
+  transition: background .25s ease;
+}
+
+.hero-left .hero-button:hover,
+.hero-left .hero-button:active,
+.mobile-hero-text .explore-care-btn:hover,
+.mobile-hero-text .explore-care-btn:active,
+.mobile-text-section .button:hover,
+.mobile-text-section .button:active {
+  background: rgba(236,229,220,.95);
 }
 
   .site-footer {
@@ -991,7 +1004,7 @@ img {
   white-space: nowrap;
 
   color: #5F574C;
-  background: rgba(243,236,225,.60);
+background: rgba(243,236,225,.85);
   border: none;
   border-radius: 0;
 }

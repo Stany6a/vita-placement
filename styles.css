@@ -1804,3 +1804,83 @@ body.menu-open {
   }
 
 }
+/* =====================================================
+   ACTIVE MOBILE MENU ITEM
+===================================================== */
+
+@media (max-width: 760px) {
+
+  .mobile-menu-links button[data-target] {
+    position: relative;
+
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      padding-left 0.25s ease;
+  }
+
+  /*
+    Подсвечивается только выбранный раздел.
+  */
+
+  .mobile-menu-links button[data-target].is-active {
+    padding-left: 30px;
+
+    background: rgba(230, 224, 212, 0.48);
+
+    color: #5F574C;
+  }
+
+  /*
+    Стрелка существует только у активного пункта.
+  */
+
+  .mobile-menu-links button[data-target].is-active::before {
+    content: "▸";
+
+    position: absolute;
+    left: 7px;
+    top: 50%;
+
+    transform: translateY(-52%);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    color: #756455;
+  }
+
+
+  /* REQUEST A CALL В ОБЩЕМ СТИЛЕ CTA */
+
+  .mobile-menu-links .mobile-menu-request {
+    margin-top: 28px;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    background: #E6E0D4;
+
+    box-shadow:
+      0 2px 10px rgba(95, 87, 76, 0.05);
+
+    text-align: center;
+
+    transition:
+      background 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .mobile-menu-links .mobile-menu-request:hover,
+  .mobile-menu-links .mobile-menu-request:active {
+    background: #DDD5C7;
+
+    box-shadow:
+      0 6px 18px rgba(95, 87, 76, 0.08);
+
+    transform: translateY(-1px);
+  }
+}

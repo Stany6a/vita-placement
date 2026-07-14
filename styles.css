@@ -1617,46 +1617,104 @@ body.menu-open {
 .learn-more-btn:hover {
   background: #ECE5DC;
   border-color: rgba(95, 87, 76, 0.18);
-}
-.mobile-panel-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  margin-top: 38px;
-}
+}/* =====================================================
+   MOBILE ACCORDION ACTIONS
+===================================================== */
 
-.mobile-back-to-menu {
-  display: none;
+@media (max-width: 760px) {
 
-  appearance: none;
-  border: 0;
-  background: transparent;
-  padding: 5px 0;
+  .mobile-panel-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  font-family: "Lato", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.06em;
+    width: 100%;
+    margin-top: 38px;
+    gap: 14px;
+  }
 
-  color: #5f574c;
-  opacity: 0.7;
-  cursor: pointer;
+  /*
+    По умолчанию Back to Main Menu полностью скрыта.
+    Она не занимает высоту и не оставляет пустого места.
+  */
 
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
+  .mobile-panel-actions .mobile-back-to-menu {
+    display: none !important;
 
-/* Показываем кнопку только при переходе из меню */
+    width: auto;
+    min-width: 0;
+    min-height: 0;
 
-.opened-from-menu .mobile-back-to-menu {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
+    margin: 0;
+    padding: 6px 12px;
 
-.mobile-back-to-menu:hover {
-  opacity: 1;
-  transform: translateY(-1px);
+    appearance: none;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+
+    font-family: "Avenir Light", Avenir,
+      "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0.04em;
+    text-transform: none;
+
+    color: #5F574C;
+    opacity: 0.72;
+
+    cursor: pointer;
+  }
+
+  /*
+    Появляется только тогда, когда JavaScript
+    добавляет панели класс opened-from-menu.
+  */
+
+  .opened-from-menu
+  .mobile-panel-actions
+  .mobile-back-to-menu {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-panel-actions .mobile-back-to-menu:active {
+    opacity: 0.45;
+  }
+
+  /*
+    Сохраняем одинаковый вид всех кнопок Close
+    и убираем старые внешние отступы.
+  */
+
+  .mobile-panel-actions .mobile-how-close,
+  .mobile-panel-actions .mobile-care-close,
+  .mobile-panel-actions .mobile-complex-close,
+  .mobile-panel-actions .mobile-local-close {
+    display: block;
+
+    width: 180px;
+    min-height: 48px;
+
+    margin: 0;
+    padding: 0 20px;
+
+    border: 1px solid rgba(95, 87, 76, 0.18);
+    border-radius: 999px;
+
+    background: rgba(255, 250, 242, 0.72);
+
+    font-family: "Avenir Light", Avenir,
+      "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    font-size: 17px;
+    font-weight: 300;
+
+    color: #5F574C;
+  }
 }

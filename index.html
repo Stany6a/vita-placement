@@ -1,58 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Vita Placement Assistance | Senior Living Guidance in Southern California</title>
-  <meta name="description" content="Personalized guidance for assisted living, board and care homes, memory care and senior living options throughout Southern California." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200..1000&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <main>
-
-    <!-- 1. Header / hero -->
-<header class="hero">
-
-<video
-  class="hero-video hero-video-desktop"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto">
-  <source src="hero_back.mp4" type="video/mp4">
-</video>
-
-<video
-  class="hero-video hero-video-mobile"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto">
-  <source src="hero_logo_mob.mp4" type="video/mp4">
-</video>
-  <div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<button class="mobile-menu-btn" type="button" id="mobileMenuButton" aria-label="Open menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-
-<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
 <!doctype html>
 <html lang="en">
@@ -102,7 +47,7 @@
 
 <div class="hero-content">
 
-  <<button class="mobile-menu-btn" type="button" id="mobileMenuButton" aria-label="Open menu">
+ <button class="mobile-menu-btn" type="button" id="mobileMenuButton" aria-label="Open menu">
   <span></span>
   <span></span>
   <span></span>
@@ -119,173 +64,169 @@
     aria-label="Close menu">
     ×
   </button>
-  <div class="accordion-actions">
+
+  <div class="mobile-menu-links">
+
+    <button type="button" data-target="service">
+      About the Service
+    </button>
+
+    <button type="button" data-target="care">
+      Care Options
+    </button>
+
+    <button type="button" data-target="pricing">
+      Pricing
+    </button>
+
+    <button type="button" data-target="areas">
+      Areas We Serve
+    </button>
+
+    <button type="button" data-target="contact">
+      Contact
+    </button>
+
+    <button
+      type="button"
+      class="mobile-menu-request js-open-request">
+      Request a Call
+    </button>
+
+  </div>
+
+</nav>
+
+  <div class="hero-left">
+  <h1>Helping families find trusted senior care solutions</h1>
+
+<button
+    class="button hero-button mobile-how-button"
+    type="button"
+    id="mobileHowButton">
+    How it works
+</button>
+</div>
+   <div class="hero-right">
+    <div class="hero-logo">
+      <div class="hero-vita">VITA</div>
+      <div class="hero-placement">placement assistance</div>
+    </div>
+  </div>
+
+</div>
+</header>
+    <section class="mobile-how-panel mobile-only" id="mobileHowPanel">
+  <div class="mobile-how-inner">
+
+   <h2>How does senior placement assistance work?</h2>
+<p>
+  A senior placement advisor helps families compare assisted living communities,
+  board and care homes, and memory care options based on care needs, budget,
+  preferred location, and personal preferences. Instead of contacting dozens of
+  communities on your own, you receive guidance, recommendations, and support
+  through the decision process.
+</p>
+
+<h2>Why work with a senior placement advisor?</h2>
+<p>
+  Finding the right senior living option can feel overwhelming. A placement advisor
+  helps narrow the search, explain different levels of care, arrange tours, and
+  identify communities that may be a good fit for your loved one.
+</p>
+ <div class="mobile-panel-actions">
 
   <button
-    type="button"
-    class="back-to-menu-btn"
-    id="backToMainMenuBtn">
+    class="mobile-back-to-menu"
+    type="button">
     Back to Main Menu
   </button>
 
   <button
+    class="mobile-how-close"
     type="button"
-    class="accordion-close-btn"
-    id="accordionCloseBtn">
+    id="mobileHowClose">
+    Close
+  </button>
+
+</div>
+  </div>
+</section>
+    <section class="mobile-hero-text mobile-only">
+
+  <p>
+    Personalized guidance for assisted living, board and care homes,
+    memory care and senior living options throughout Southern California.
+  </p>
+
+  <button
+    class="button explore-care-btn"
+    type="button"
+    id="exploreCareButton">
+    Explore Care Options
+  </button>
+
+</section>
+    <section class="mobile-care-panel mobile-only" id="mobileCarePanel">
+
+  <div class="mobile-care-inner">
+
+    <h2>What is assisted living and who is it for?</h2>
+
+    <p>
+      Assisted living is designed for older adults who want to remain as
+      independent as possible but need support with daily activities such as
+      bathing, dressing, medication management, meals, or mobility. Communities
+      typically provide private or shared apartments, meals, social activities,
+      housekeeping, and staff assistance throughout the day.
+    </p>
+
+    <h2>What is memory care?</h2>
+
+    <p>
+      Memory care is a specialized type of senior living for people with
+      Alzheimer’s disease, dementia, or other forms of memory loss. Memory care
+      communities offer secure environments, structured daily routines,
+      specially trained staff, and personalized support designed around each
+      resident’s cognitive and physical needs.
+    </p>
+
+    <h2>What is a board and care home?</h2>
+
+    <p>
+      A board and care home is a smaller residential care setting, usually
+      located in a traditional house and serving a limited number of residents.
+      These homes often provide a quieter environment, home-style meals,
+      personal assistance, and a higher level of individual attention than
+      larger senior living communities.
+    </p>
+
+    <h2>What does senior living include?</h2>
+
+    <p>
+      Senior living is a broad term that includes different housing and care
+      options for older adults, such as independent living, assisted living,
+      memory care, and board and care homes. The right option depends on a
+      person’s health, level of independence, care needs, budget, preferred
+      location, and lifestyle.
+    </p>
+    <div class="mobile-panel-actions">
+
+  <button
+    class="mobile-back-to-menu"
+    type="button">
+    Back to Main Menu
+  </button>
+
+  <button
+    class="mobile-care-close"
+    type="button"
+    id="mobileCareClose">
     Close
   </button>
 
 </div>
 
-  <div class="mobile-menu-links">
-
-    <button type="button" data-target="service">
-      About the Service
-    </button>
-
-    <button type="button" data-target="care">
-      Care Options
-    </button>
-
-    <button type="button" data-target="pricing">
-      Pricing
-    </button>
-
-    <button type="button" data-target="areas">
-      Areas We Serve
-    </button>
-
-    <button type="button" data-target="contact">
-      Contact
-    </button>
-
-    <button
-      type="button"
-      class="mobile-menu-request js-open-request">
-      Request a Call
-    </button>
-
-  </div>
-
-</nav>
-
-  <div class="hero-left">
-  <h1>Helping families find trusted senior care solutions</h1>
-
-<button
-    class="button hero-button mobile-how-button"
-    type="button"
-    id="mobileHowButton">
-    How it works
-</button>
-</div>
-   <div class="hero-right">
-    <div class="hero-logo">
-      <div class="hero-vita">VITA</div>
-      <div class="hero-placement">placement assistance</div>
-    </div>
-  </div>
-
-</div>
-</header>
-    <section class="mobile-how-panel mobile-only" id="mobileHowPanel">
-  <div class="mobile-how-inner">
-
-   <h2>How does senior placement assistance work?</h2>
-<p>
-  A senior placement advisor helps families compare assisted living communities,
-  board and care homes, and memory care options based on care needs, budget,
-  preferred location, and personal preferences. Instead of contacting dozens of
-  communities on your own, you receive guidance, recommendations, and support
-  through the decision process.
-</p>
-
-<h2>Why work with a senior placement advisor?</h2>
-<p>
-  Finding the right senior living option can feel overwhelming. A placement advisor
-  helps narrow the search, explain different levels of care, arrange tours, and
-  identify communities that may be a good fit for your loved one.
-</p>
- <button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
-<button class="mobile-how-close" type="button" id="mobileHowClose">
-  Close
-</button>
-  </div>
-</section>
-    <section class="mobile-hero-text mobile-only">
-
-  <p>
-    Personalized guidance for assisted living, board and care homes,
-    memory care and senior living options throughout Southern California.
-  </p>
-
-  <button
-    class="button explore-care-btn"
-    type="button"
-    id="exploreCareButton">
-    Explore Care Options
-  </button>
-
-</section>
-    <section class="mobile-care-panel mobile-only" id="mobileCarePanel">
-
-  <div class="mobile-care-inner">
-
-    <h2>What is assisted living and who is it for?</h2>
-
-    <p>
-      Assisted living is designed for older adults who want to remain as
-      independent as possible but need support with daily activities such as
-      bathing, dressing, medication management, meals, or mobility. Communities
-      typically provide private or shared apartments, meals, social activities,
-      housekeeping, and staff assistance throughout the day.
-    </p>
-
-    <h2>What is memory care?</h2>
-
-    <p>
-      Memory care is a specialized type of senior living for people with
-      Alzheimer’s disease, dementia, or other forms of memory loss. Memory care
-      communities offer secure environments, structured daily routines,
-      specially trained staff, and personalized support designed around each
-      resident’s cognitive and physical needs.
-    </p>
-
-    <h2>What is a board and care home?</h2>
-
-    <p>
-      A board and care home is a smaller residential care setting, usually
-      located in a traditional house and serving a limited number of residents.
-      These homes often provide a quieter environment, home-style meals,
-      personal assistance, and a higher level of individual attention than
-      larger senior living communities.
-    </p>
-
-    <h2>What does senior living include?</h2>
-
-    <p>
-      Senior living is a broad term that includes different housing and care
-      options for older adults, such as independent living, assisted living,
-      memory care, and board and care homes. The right option depends on a
-      person’s health, level of independence, care needs, budget, preferred
-      location, and lifestyle.
-    </p>
-    <button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
- <button
-      class="mobile-care-close"
-      type="button"
-      id="mobileCareClose">
-      Close
-    </button>
-
   </div>
 
 </section>
@@ -353,17 +294,22 @@
       Placement Assistance helps families understand these costs, compare
       options, and identify communities that fit their care needs and budget.
     </p>
-<button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
-    <button
-      class="mobile-complex-close"
-      type="button"
-      id="mobileComplexClose">
-      Close
-    </button>
+<div class="mobile-panel-actions">
+
+  <button
+    class="mobile-back-to-menu"
+    type="button">
+    Back to Main Menu
+  </button>
+
+  <button
+    class="mobile-complex-close"
+    type="button"
+    id="mobileComplexClose">
+    Close
+  </button>
+
+</div>
 
   </div>
 
@@ -422,18 +368,22 @@
       This makes it easier to compare care, services, pricing, atmosphere,
       and availability before making a decision.
     </p>
-    <button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
+    <div class="mobile-panel-actions">
 
-    <button
-      class="mobile-local-close"
-      type="button"
-      id="mobileLocalClose">
-      Close
-    </button>
+  <button
+    class="mobile-back-to-menu"
+    type="button">
+    Back to Main Menu
+  </button>
+
+  <button
+    class="mobile-local-close"
+    type="button"
+    id="mobileLocalClose">
+    Close
+  </button>
+
+</div>
 
   </div>
 
@@ -547,416 +497,6 @@
 
   </main>
 
-
-  <div class="mobile-menu-links">
-
-    <button type="button" data-target="service">
-      About the Service
-    </button>
-
-    <button type="button" data-target="care">
-      Care Options
-    </button>
-
-    <button type="button" data-target="pricing">
-      Pricing
-    </button>
-
-    <button type="button" data-target="areas">
-      Areas We Serve
-    </button>
-
-    <button type="button" data-target="contact">
-      Contact
-    </button>
-
-    <button
-      type="button"
-      class="mobile-menu-request js-open-request">
-      Request a Call
-    </button>
-
-  </div>
-
-</nav>
-
-  <div class="hero-left">
-  <h1>Helping families find trusted senior care solutions</h1>
-
-<button
-    class="button hero-button mobile-how-button"
-    type="button"
-    id="mobileHowButton">
-    How it works
-</button>
-</div>
-   <div class="hero-right">
-    <div class="hero-logo">
-      <div class="hero-vita">VITA</div>
-      <div class="hero-placement">placement assistance</div>
-    </div>
-  </div>
-
-</div>
-</header>
-    <section class="mobile-how-panel mobile-only" id="mobileHowPanel">
-  <div class="mobile-how-inner">
-
-   <h2>How does senior placement assistance work?</h2>
-<p>
-  A senior placement advisor helps families compare assisted living communities,
-  board and care homes, and memory care options based on care needs, budget,
-  preferred location, and personal preferences. Instead of contacting dozens of
-  communities on your own, you receive guidance, recommendations, and support
-  through the decision process.
-</p>
-
-<h2>Why work with a senior placement advisor?</h2>
-<p>
-  Finding the right senior living option can feel overwhelming. A placement advisor
-  helps narrow the search, explain different levels of care, arrange tours, and
-  identify communities that may be a good fit for your loved one.
-</p>
- <button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
-<button class="mobile-how-close" type="button" id="mobileHowClose">
-  Close
-</button>
-  </div>
-</section>
-    <section class="mobile-hero-text mobile-only">
-
-  <p>
-    Personalized guidance for assisted living, board and care homes,
-    memory care and senior living options throughout Southern California.
-  </p>
-
-  <button
-    class="button explore-care-btn"
-    type="button"
-    id="exploreCareButton">
-    Explore Care Options
-  </button>
-
-</section>
-    <section class="mobile-care-panel mobile-only" id="mobileCarePanel">
-
-  <div class="mobile-care-inner">
-
-    <h2>What is assisted living and who is it for?</h2>
-
-    <p>
-      Assisted living is designed for older adults who want to remain as
-      independent as possible but need support with daily activities such as
-      bathing, dressing, medication management, meals, or mobility. Communities
-      typically provide private or shared apartments, meals, social activities,
-      housekeeping, and staff assistance throughout the day.
-    </p>
-
-    <h2>What is memory care?</h2>
-
-    <p>
-      Memory care is a specialized type of senior living for people with
-      Alzheimer’s disease, dementia, or other forms of memory loss. Memory care
-      communities offer secure environments, structured daily routines,
-      specially trained staff, and personalized support designed around each
-      resident’s cognitive and physical needs.
-    </p>
-
-    <h2>What is a board and care home?</h2>
-
-    <p>
-      A board and care home is a smaller residential care setting, usually
-      located in a traditional house and serving a limited number of residents.
-      These homes often provide a quieter environment, home-style meals,
-      personal assistance, and a higher level of individual attention than
-      larger senior living communities.
-    </p>
-
-    <h2>What does senior living include?</h2>
-
-    <p>
-      Senior living is a broad term that includes different housing and care
-      options for older adults, such as independent living, assisted living,
-      memory care, and board and care homes. The right option depends on a
-      person’s health, level of independence, care needs, budget, preferred
-      location, and lifestyle.
-    </p>
-    <button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
- <button
-      class="mobile-care-close"
-      type="button"
-      id="mobileCareClose">
-      Close
-    </button>
-
-  </div>
-
-</section>
-<section class="mobile-image-section mobile-only" style="background-image: url('block_2.png');">
-  <h2>The personalized guidance process at no cost to families</h2>
-</section>
-
-<section class="mobile-text-section mobile-only">
-  <p>
-  Our services are 100% free to families. We are compensated by the community you choose, allowing us to focus entirely on finding the perfect match for your needs.
-</p>
-
-<button
-    class="button request-call-btn js-open-request"
-    type="button">
-    Request a Call
-</button>
-</section>
-
-<section class="mobile-image-section mobile-only" style="background-image: url('Block_5.png');">
-  <h2>Making a complex process feel manageable</h2>
-</section>
-
-<section class="mobile-text-section mobile-only">
-  <p>
-    We simplify the search for senior living and care options so families can focus on what matters most.
-  </p>
-
- <button
-  class="button text-button learn-more-btn"
-  type="button"
-  id="mobileComplexButton">
-  Learn More
-</button>
-</section><section
-  class="mobile-complex-panel mobile-only"
-  id="mobileComplexPanel">
-
-  <div class="mobile-complex-inner">
-
-    <h2>How do I know which senior care option is right?</h2>
-
-    <p>
-      The right senior care option depends on the person’s daily support needs,
-      medical and cognitive condition, preferred environment, location, and
-      budget. Vita Placement Assistance helps families compare local assisted
-      living, memory care, board and care, and other senior living options
-      throughout Southern California.
-    </p>
-
-    <h2>Is senior placement assistance really free for families?</h2>
-
-    <p>
-      Yes. Vita Placement Assistance is 100% free to families. We are compensated
-      by the senior living community after a successful placement, so families
-      do not pay a fee for our guidance, recommendations, or help arranging tours.
-    </p>
-
-    <h2>How much do assisted living, memory care, and board and care homes cost?</h2>
-
-    <p>
-      Senior living costs vary based on the type of care, location, room style,
-      level of assistance, and services included. Assisted living, memory care,
-      and board and care homes may each use different pricing structures. Vita
-      Placement Assistance helps families understand these costs, compare
-      options, and identify communities that fit their care needs and budget.
-    </p>
-<button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
-    <button
-      class="mobile-complex-close"
-      type="button"
-      id="mobileComplexClose">
-      Close
-    </button>
-
-  </div>
-
-</section>
-
-<section class="mobile-image-section mobile-only" style="background-image: url('Block_6.png');">
-  <h2>Turning local expertise into the right shortlist</h2>
-</section>
-
-<section class="mobile-text-section mobile-only">
-  <p>
-    With extensive knowledge of local senior living communities, we narrow countless options into a focused shortlist tailored to your family's unique situation.
-  </p>
-
-  <button
-  class="button text-button local-guidance-btn"
-  type="button"
-  id="mobileLocalButton">
-  Explore Local Guidance
-</button>
-</section>
-    <section
-  class="mobile-local-panel mobile-only"
-  id="mobileLocalPanel">
-
-  <div class="mobile-local-inner">
-
-    <h2>What areas does Vita Placement Assistance serve?</h2>
-
-    <p>
-     We primarily serve families in Irvine, Newport Beach, Huntington Beach, 
-      Mission Viejo, Laguna Niguel, Anaheim, Orange, Santa Ana, Costa Mesa,
-      Tustin, Fullerton, Yorba Linda, and surrounding Orange County communities
-      and also assist clients in neighboring 
-      communities across Southern California. Our local knowledge 
-      allows us to recommend assisted living, memory care,
-      board and care homes, and other senior living options
-      that match your location, care needs, budget, and lifestyle preferences.
-    </p>
-
-    <h2>Do I need to visit every senior living community myself?</h2>
-
-    <p>
-      No. Families do not need to contact or visit every senior living
-      community on their own. Vita Placement Assistance narrows the search
-      to suitable options based on your loved one’s needs, preferences,
-      location, and budget, helping you focus on the communities most
-      likely to be a good fit.
-    </p>
-
-    <h2>Can Vita help arrange senior living tours?</h2>
-
-    <p>
-      Yes. We help families coordinate tours of selected senior living
-      communities and prepare for the questions that are important to ask.
-      This makes it easier to compare care, services, pricing, atmosphere,
-      and availability before making a decision.
-    </p>
-    <button
-  class="mobile-back-to-menu"
-  type="button">
-  Back to Main Menu
-</button>
-
-    <button
-      class="mobile-local-close"
-      type="button"
-      id="mobileLocalClose">
-      Close
-    </button>
-
-  </div>
-
-</section>
-    <!-- 2 + 3 -->
-    <section class="two-column">
-      <div class="image-block">
-        <img src="block_2.png" alt="Senior care guidance">
-      </div>
-
-      <div class="text-block">
-        <h2>The personalized guidance process at no cost to families</h2>
-        <p>
-          Our services are 100% free to families. We are compensated by the community you choose,
-          allowing us to focus entirely on finding the perfect match for your needs.
-        </p>
-      </div>
-    </section>
-
-    <!-- 4 + 5 -->
-    <section class="two-column">
-      <div class="text-block">
-        <h2>Making a complex process feel manageable</h2>
-
-        <p>
-          We simplify the search for senior living and care options so families can focus on what matters most.
-        </p>
-
-        <button class="button text-button learn-more-btn" type="button" >
-    Learn More
-</button>
-      </div>
-
-      <div class="image-block">
-        <img src="Block_5.png" alt="Planning process">
-      </div>
-    </section>
-    <!-- 6 + 7 -->
-<section class="two-column">
-  <div class="image-block">
-    <img src="Block_6.png" alt="Local senior living expertise">
-  </div>
-
-  <div class="text-block">
-    <h2>Turning local expertise into the right shortlist</h2>
-
-    <p>
-      With extensive knowledge of local senior living communities, we narrow
-      countless options into a focused shortlist tailored to your family's
-      unique situation.
-    </p>
-  </div>
-</section>
-   
-
-    <!-- 8. Footer -->
- <footer class="site-footer" id="contact">
-
-  <video
-    class="footer-video"
-    autoplay
-    muted
-    loop
-    playsinline>
-    <source src="hero_back.mp4" type="video/mp4">
-  </video>
-
-  <div class="footer-overlay"></div>
-
-  <div class="footer-content">
-        <h2>Because every chapter of life matters</h2>
-
-        <p>Let's talk about what comes next.</p>
-
-        <p>
-          <a href="tel:+19497351581">(949) 735-1581</a>
-        </p>
-
-        <p>
-          <a href="mailto:vitaplacement@gmail.com?subject=Vita%20Placement%20Inquiry">
-            vitaplacement@gmail.com
-          </a>
-        </p>
-
-        <div class="social-links">
-          <a href="https://www.instagram.com/vitaplacement?igsh=NTc4MTIwNjQ2YQ=="
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-
-          <a href="https://www.facebook.com/profile.php?id=61582560761030"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-
-          <a href="#"
-             target="_blank"
-             rel="noopener noreferrer"
-             aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-        </div>
-      </div>
-
-      <p class="copyright">© 2026 Vita Placement Assistance LLC. All rights reserved.</p>
-    </footer>
-
-  </main>
 
   <!-- Popup request form -->
 <div class="popup-overlay" id="requestPopup">
@@ -1696,3 +1236,5 @@ if (mobileMenuRequest) {
   );
 }
 </script>
+</body>
+</html>

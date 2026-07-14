@@ -642,41 +642,46 @@ transition:
   position: absolute;
 
   top: 48px;
-
   left: 5%;
-
-  right: auto;
 
   z-index: 6;
 
   width: 58px;
-
   height: 50px;
 
   margin: 0;
+  padding: 0;
 
-  border: 1px solid rgba(95,87,76,.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
 
-  border-radius: 14px;
+  border: none;
 
   background: rgba(255,250,242,.62);
 
-  backdrop-filter: blur(10px);
+  border-radius: 0;
 
-  display: flex;
+  box-shadow:
+    0 3px 12px rgba(95,87,76,.08);
 
-  align-items: center;
+  transition:
+    background .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
+}
+ .mobile-menu-btn:hover,
+.mobile-menu-btn:active {
 
-  justify-content: center;
+  background: rgba(255,250,242,.74);
 
-  flex-direction: column;
+  box-shadow:
+    0 7px 20px rgba(95,87,76,.12);
 
-  gap: 5px;
-  }
-  .mobile-menu-btn:hover {
-    background: rgba(255,250,242,.82);
-  }
-
+  transform: translateY(-1px);
+}
   .mobile-menu-btn span {
     width: 22px;
     height: 2px;

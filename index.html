@@ -46,11 +46,55 @@
 
 <div class="hero-content">
 
-  <button class="mobile-menu-btn" type="button" aria-label="Open menu">
-    <span></span>
-    <span></span>
-    <span></span>
+  <<button class="mobile-menu-btn" type="button" id="mobileMenuButton" aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<nav class="mobile-side-menu" id="mobileSideMenu" aria-label="Mobile navigation">
+
+  <button
+    class="mobile-menu-close"
+    type="button"
+    id="mobileMenuClose"
+    aria-label="Close menu">
+    ×
   </button>
+
+  <div class="mobile-menu-links">
+
+    <button type="button" data-target="service">
+      About the Service
+    </button>
+
+    <button type="button" data-target="care">
+      Care Options
+    </button>
+
+    <button type="button" data-target="pricing">
+      Pricing
+    </button>
+
+    <button type="button" data-target="areas">
+      Areas We Serve
+    </button>
+
+    <button type="button" data-target="contact">
+      Contact
+    </button>
+
+    <button
+      type="button"
+      class="mobile-menu-request js-open-request">
+      Request a Call
+    </button>
+
+  </div>
+
+</nav>
 
   <div class="hero-left">
   <h1>Helping families find trusted senior care solutions</h1>
@@ -783,6 +827,121 @@ if (
       mobileLocalPanel.style.height =
         updatedHeight + 'px';
     }
+  });
+}
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenuClose = document.getElementById('mobileMenuClose');
+const mobileSideMenu = document.getElementById('mobileSideMenu');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const mobileMenuLinks = document.querySelectorAll(
+  '.mobile-menu-links button[data-target]'
+);
+
+function openMobileMenu() {
+  mobileSideMenu.classList.add('is-open');
+  mobileMenuOverlay.classList.add('is-open');
+  document.body.classList.add('menu-open');
+}
+
+function closeMobileMenu() {
+  mobileSideMenu.classList.remove('is-open');
+  mobileMenuOverlay.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
+}
+
+if (
+  mobileMenuButton &&
+  mobileMenuClose &&
+  mobileSideMenu &&
+  mobileMenuOverlay
+) {
+  mobileMenuButton.addEventListener('click', openMobileMenu);
+  mobileMenuClose.addEventListener('click', closeMobileMenu);
+  mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+}
+
+document.addEventListener('keydown', function (event) {
+  if (
+    event.key === 'Escape' &&
+    mobileSideMenu &&
+    mobileSideMenu.classList.contains('is-open')
+  ) {
+    closeMobileMenu();
+  }
+});
+    function openAccordionFromMenu(button, panel) {
+  if (!button || !panel) {
+    return;
+  }
+
+  closeMobileMenu();
+
+  panel.classList.add('is-open');
+  panel.style.height = panel.scrollHeight + 'px';
+
+  setTimeout(function () {
+    panel.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }, 380);
+}mobileMenuLinks.forEach(function (menuItem) {
+
+  menuItem.addEventListener('click', function () {
+
+    const target = menuItem.dataset.target;
+
+    if (target === 'service') {
+      openAccordionFromMenu(
+        mobileHowButton,
+        mobileHowPanel
+      );
+    }
+
+    if (target === 'care') {
+      openAccordionFromMenu(
+        exploreCareButton,
+        mobileCarePanel
+      );
+    }
+
+    if (target === 'pricing') {
+      openAccordionFromMenu(
+        mobileComplexButton,
+        mobileComplexPanel
+      );
+    }
+
+    if (target === 'areas') {
+      openAccordionFromMenu(
+        mobileLocalButton,
+        mobileLocalPanel
+      );
+    }
+
+    if (target === 'contact') {
+      closeMobileMenu();
+
+      const contactSection =
+        document.getElementById('contact');
+
+      setTimeout(function () {
+        contactSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 380);
+    }
+
+  });
+
+});
+    const mobileMenuRequest =
+  document.querySelector('.mobile-menu-request');
+
+if (mobileMenuRequest) {
+  mobileMenuRequest.addEventListener('click', function () {
+    closeMobileMenu();
   });
 }
 </script>

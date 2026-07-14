@@ -902,7 +902,7 @@ transition:
     margin-left: 0;
     margin-right: 0;
 
-    padding: 34svh 24px 0;
+padding: calc(34svh + 28px) 24px 0;
 
     text-align: left;
 
@@ -917,24 +917,30 @@ transition:
     font-size: 19px;
   }
 
- .copyright {
+.copyright {
   position: absolute;
   z-index: 2;
 
-  bottom: 28px;
+  bottom: 18px;
   left: 24px;
   right: 24px;
+
+  width: calc(100% - 48px);
+  max-width: calc(100% - 48px);
 
   margin: 0;
   padding: 0;
 
-  font-family: "Avenir Light", Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 10px;
+  font-family: "Avenir Light", Avenir,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  font-size: 8px;
   font-weight: 300;
   line-height: 1.25;
 
   text-align: left;
-  white-space: normal;
+  white-space: normal !important;
+  overflow-wrap: anywhere;
 
   color: rgba(95, 87, 76, 0.72);
 }

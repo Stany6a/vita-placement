@@ -1946,3 +1946,13 @@ body.menu-open {
     transform: translateY(-1px);
   }
 }
+/* =====================================================
+   OPEN PANELS
+===================================================== */
+
+.mobile-how-panel,
+.mobile-care-panel,
+.mobile-complex-panel,
+.mobile-local-panel {
+    background: #ECE7DC;
+}

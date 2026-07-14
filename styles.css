@@ -1618,3 +1618,45 @@ body.menu-open {
   background: #ECE5DC;
   border-color: rgba(95, 87, 76, 0.18);
 }
+.mobile-panel-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.mobile-back-to-menu {
+  display: none;
+
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 5px 0;
+
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+
+  color: #5f574c;
+  opacity: 0.7;
+  cursor: pointer;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Показываем кнопку только при переходе из меню */
+
+.opened-from-menu .mobile-back-to-menu {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-back-to-menu:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}

@@ -1895,7 +1895,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
-  if (desktopCareViewport.addEventListener) {
+    if (desktopCareViewport.addEventListener) {
 
     desktopCareViewport.addEventListener(
       'change',
@@ -1910,110 +1910,156 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-  /* =========================================================
-     DESKTOP SENIOR CARE GUIDANCE ACCORDION
-  ========================================================= */
+})();
 
-  (() => {
 
-    const desktopComplexButton =
-      document.getElementById('desktopComplexButton');
+/* =========================================================
+   DESKTOP SENIOR CARE GUIDANCE ACCORDION
+========================================================= */
 
-    const desktopComplexPanel =
-      document.getElementById('desktopComplexPanel');
+(() => {
 
-    const desktopComplexClose =
-      document.getElementById('desktopComplexClose');
+  const desktopComplexButton =
+    document.getElementById('desktopComplexButton');
 
-    if (
-      !desktopComplexButton ||
-      !desktopComplexPanel ||
-      !desktopComplexClose
-    ) {
+  const desktopComplexPanel =
+    document.getElementById('desktopComplexPanel');
+
+  const desktopComplexClose =
+    document.getElementById('desktopComplexClose');
+
+
+  if (
+    !desktopComplexButton ||
+    !desktopComplexPanel ||
+    !desktopComplexClose
+  ) {
+    return;
+  }
+
+
+  const desktopComplexViewport =
+    window.matchMedia('(min-width: 761px)');
+
+
+  function openDesktopComplexPanel() {
+
+    if (!desktopComplexViewport.matches) {
       return;
     }
 
-    const desktopComplexViewport =
-      window.matchMedia('(min-width: 761px)');
+    desktopComplexPanel.classList.add('is-open');
 
-    function openDesktopComplexPanel() {
+    desktopComplexPanel.setAttribute(
+      'aria-hidden',
+      'false'
+    );
 
-      if (!desktopComplexViewport.matches) {
-        return;
-      }
+    desktopComplexButton.setAttribute(
+      'aria-expanded',
+      'true'
+    );
 
-      desktopComplexPanel.classList.add('is-open');
-      desktopComplexPanel.setAttribute('aria-hidden', 'false');
-      desktopComplexButton.setAttribute('aria-expanded', 'true');
+    window.setTimeout(function () {
 
-      window.setTimeout(() => {
-        desktopComplexPanel.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }, 60);
-    }
+      desktopComplexPanel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
 
-    function closeDesktopComplexPanel() {
+    }, 60);
+  }
 
-      desktopComplexPanel.classList.remove('is-open');
-      desktopComplexPanel.setAttribute('aria-hidden', 'true');
-      desktopComplexButton.setAttribute('aria-expanded', 'false');
-    }
 
-    desktopComplexButton.addEventListener('click', function () {
+  function closeDesktopComplexPanel() {
+
+    desktopComplexPanel.classList.remove('is-open');
+
+    desktopComplexPanel.setAttribute(
+      'aria-hidden',
+      'true'
+    );
+
+    desktopComplexButton.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+  }
+
+
+  desktopComplexButton.addEventListener(
+    'click',
+    function () {
 
       if (!desktopComplexViewport.matches) {
         return;
       }
 
       const panelIsOpen =
-        desktopComplexPanel.classList.contains('is-open');
+        desktopComplexPanel.classList.contains(
+          'is-open'
+        );
 
       if (panelIsOpen) {
         closeDesktopComplexPanel();
       } else {
         openDesktopComplexPanel();
       }
-    });
+    }
+  );
 
-    desktopComplexClose.addEventListener(
-      'click',
-      closeDesktopComplexPanel
-    );
 
-    document.addEventListener('keydown', function (event) {
+  desktopComplexClose.addEventListener(
+    'click',
+    closeDesktopComplexPanel
+  );
+
+
+  document.addEventListener(
+    'keydown',
+    function (event) {
 
       if (
         event.key === 'Escape' &&
-        desktopComplexPanel.classList.contains('is-open')
+        desktopComplexPanel.classList.contains(
+          'is-open'
+        )
       ) {
         closeDesktopComplexPanel();
       }
-    });
-
-    function closeComplexPanelAfterViewportChange(event) {
-
-      if (!event.matches) {
-        closeDesktopComplexPanel();
-      }
     }
+  );
 
-    if (
-      typeof desktopComplexViewport.addEventListener ===
-      'function'
-    ) {
-      desktopComplexViewport.addEventListener(
-        'change',
-        closeComplexPanelAfterViewportChange
-      );
-    } else {
-      desktopComplexViewport.addListener(
-        closeComplexPanelAfterViewportChange
-      );
+
+  function closeComplexPanelAfterViewportChange(
+    event
+  ) {
+
+    if (!event.matches) {
+      closeDesktopComplexPanel();
     }
+  }
 
-  })();
+
+  if (
+    typeof desktopComplexViewport.addEventListener ===
+    'function'
+  ) {
+
+    desktopComplexViewport.addEventListener(
+      'change',
+      closeComplexPanelAfterViewportChange
+    );
+
+  } else {
+
+    desktopComplexViewport.addListener(
+      closeComplexPanelAfterViewportChange
+    );
+
+  }
+
+})();
 
 </script>
 

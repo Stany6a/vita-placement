@@ -2072,4 +2072,31 @@ body.menu-open {
     transform: none;
     transition: none;
   }
+}/* =========================================================
+   DESKTOP HERO FIX
+   Does not affect mobile
+========================================================= */
+
+@media (min-width: 761px) {
+
+  .hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Mobile navigation must never appear on desktop */
+
+  .mobile-menu-btn,
+  .mobile-menu-overlay,
+  .mobile-side-menu,
+  .mobile-how-panel,
+  .mobile-care-panel,
+  .mobile-complex-panel,
+  .mobile-local-panel {
+    display: none !important;
+  }
+
 }

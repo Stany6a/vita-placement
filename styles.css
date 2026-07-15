@@ -2019,3 +2019,53 @@ body.menu-open {
     transform: translateY(30px);
   }
 }
+/* SMOOTH TEXT APPEARANCE */
+
+.fade-in-text {
+  opacity: 1;
+  transform: none;
+}
+
+.js .fade-in-text {
+  opacity: 0;
+  transform: translateY(18px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+
+  will-change: opacity, transform;
+}
+
+.js .fade-in-text.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slightly more delicate movement on mobile */
+
+@media (max-width: 760px) {
+
+  .js .fade-in-text {
+    transform: translateY(14px);
+
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .js .fade-in-text.is-visible {
+    transform: translateY(0);
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .js .fade-in-text {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -15,6 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css">
+  <script>
+  document.documentElement.classList.add('js');
+</script>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -56,7 +59,9 @@
 
 
   <div class="hero-left">
-  <h1>Helping families find trusted senior care solutions</h1>
+ <h1 class="fade-in-text">
+  Helping families find trusted senior care solutions
+</h1>
 
 <button
     class="button hero-button mobile-how-button"
@@ -233,7 +238,9 @@
 
 </section>
 <section class="mobile-image-section mobile-only" style="background-image: url('block_2.png');">
-  <h2>The personalized guidance process at no cost to families</h2>
+  <h2 class="fade-in-text">
+  The personalized guidance process at no cost to families
+</h2>
 </section>
 
 <section class="mobile-text-section mobile-only">
@@ -249,7 +256,9 @@
 </section>
 
 <section class="mobile-image-section mobile-only" style="background-image: url('Block_5.png');">
-  <h2>Making a complex process feel manageable</h2>
+ <h2 class="fade-in-text">
+  Making a complex process feel manageable
+</h2>
 </section>
 
 <section class="mobile-text-section mobile-only">
@@ -318,7 +327,9 @@
 </section>
 
 <section class="mobile-image-section mobile-only" style="background-image: url('Block_6.png');">
-  <h2>Turning local expertise into the right shortlist</h2>
+  <h2 class="fade-in-text">
+  Turning local expertise into the right shortlist
+</h2>
 </section>
 
 <section class="mobile-text-section mobile-only">
@@ -456,8 +467,9 @@
   <div class="footer-overlay"></div>
 
   <div class="footer-content">
-        <h2>Because every chapter of life matters</h2>
-
+       <h2 class="fade-in-text">
+  Because every chapter of life matters.
+</h2>
         <p>Let's talk about what comes next.</p>
 
         <p>
@@ -1236,10 +1248,7 @@ backToMenuButtons.forEach(function (button) {
 ========================================================= */
 
 const mobileMenuRequest =
-  document.querySelector(
-    '.mobile-menu-request'
-  );
-
+  document.querySelector('.mobile-menu-request');
 
 if (mobileMenuRequest) {
   mobileMenuRequest.addEventListener(
@@ -1249,6 +1258,44 @@ if (mobileMenuRequest) {
     }
   );
 }
+
+
+/* =========================================================
+   SMOOTH TEXT APPEARANCE
+========================================================= */
+
+document.addEventListener('DOMContentLoaded', function () {
+  const animatedTextBlocks =
+    document.querySelectorAll('.fade-in-text');
+
+  if (!('IntersectionObserver' in window)) {
+    animatedTextBlocks.forEach(function (element) {
+      element.classList.add('is-visible');
+    });
+
+    return;
+  }
+
+  const textObserver = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -8% 0px'
+    }
+  );
+
+  animatedTextBlocks.forEach(function (element) {
+    textObserver.observe(element);
+  });
+});
+
 </script>
 </body>
 </html>

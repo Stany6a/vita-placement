@@ -2817,3 +2817,56 @@ body.menu-open {
   }
 
 }
+/* =========================================================
+   DESKTOP SENIOR CARE GUIDANCE — STYLE CORRECTIONS
+========================================================= */
+
+@media (min-width: 761px) {
+
+  /* Верхняя подпись Senior Care Guidance */
+  .desktop-complex-label {
+    font-family:
+      "Avenir Light",
+      "Avenir Next",
+      Avenir,
+      sans-serif;
+
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.18em;
+  }
+
+
+  /* Текст ответов */
+  .desktop-complex-item p {
+    font-family:
+      "Avenir Light",
+      "Avenir Next",
+      Avenir,
+      sans-serif;
+
+    font-weight: 300;
+    line-height: 1.65;
+  }
+
+
+  /* Убираем горизонтальные линии */
+  .desktop-complex-item {
+    border-top: none;
+  }
+
+
+  /* Крестик больше не вращается */
+  .desktop-complex-close {
+    transform: none;
+
+    transition:
+      opacity 0.3s ease;
+  }
+
+  .desktop-complex-close:hover {
+    opacity: 1;
+    transform: none;
+  }
+
+}

@@ -548,23 +548,141 @@ Turning local expertise into the right senior living shortlist
   </div>
 
 </section>
-    <!-- 2 + 3 -->
-    <section class="two-column">
-      <div class="image-block">
-        <img
-  src="block_2.png"
-  alt="Hands representing personal support for families seeking senior care"
->
+   <!-- 2 + 3 -->
+<section class="two-column desktop-care-intro">
+
+  <div class="image-block">
+    <img
+      src="block_2.png"
+      alt="Hands representing personal support for families seeking senior care"
+    >
+  </div>
+
+  <div class="text-block">
+
+    <h2>
+      Personalized senior placement guidance at no cost to families
+    </h2>
+
+    <p>
+      Our services are 100% free to families. We are compensated by the
+      community you choose, allowing us to focus entirely on finding the
+      perfect match for your needs.
+    </p>
+
+    <button
+      class="button desktop-care-button"
+      type="button"
+      id="desktopCareButton"
+      aria-expanded="false"
+      aria-controls="desktopCarePanel">
+      Explore Care Options
+    </button>
+
+  </div>
+
+</section>
+
+<!-- Desktop Care Options accordion -->
+<section
+  class="desktop-care-panel"
+  id="desktopCarePanel"
+  aria-hidden="true">
+
+  <div class="desktop-care-shell">
+
+    <div class="desktop-care-inner">
+
+      <button
+        class="desktop-care-close"
+        type="button"
+        id="desktopCareClose"
+        aria-label="Close Care Options section">
+        ×
+      </button>
+
+      <p class="desktop-care-label">
+        Care Options
+      </p>
+
+      <div class="desktop-care-grid">
+
+        <article class="desktop-care-item">
+
+          <h2>
+            What is assisted living and who is it for?
+          </h2>
+
+          <p>
+            Assisted living is designed for older adults who want to remain as
+            independent as possible but need support with daily activities such
+            as bathing, dressing, medication management, meals, or mobility.
+            Communities typically provide private or shared apartments, meals,
+            social activities, housekeeping, and staff assistance throughout
+            the day.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-care-item">
+
+          <h2>
+            What is memory care?
+          </h2>
+
+          <p>
+            Memory care is a specialized type of senior living for people with
+            Alzheimer’s disease, dementia, or other forms of memory loss.
+            Memory care communities offer secure environments, structured
+            daily routines, specially trained staff, and personalized support
+            designed around each resident’s cognitive and physical needs.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-care-item">
+
+          <h2>
+            What is a board and care home?
+          </h2>
+
+          <p>
+            A board and care home is a smaller residential care setting,
+            usually located in a traditional house and serving a limited
+            number of residents. These homes often provide a quieter
+            environment, home-style meals, personal assistance, and a higher
+            level of individual attention than larger senior living
+            communities.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-care-item">
+
+          <h2>
+            What does senior living include?
+          </h2>
+
+          <p>
+            Senior living is a broad term that includes different housing and
+            care options for older adults, such as independent living,
+            assisted living, memory care, and board and care homes. The right
+            option depends on a person’s health, level of independence, care
+            needs, budget, preferred location, and lifestyle.
+          </p>
+
+        </article>
+
       </div>
 
-      <div class="text-block">
-        <h2>The personalized guidance process at no cost to families</h2>
-        <p>
-          Our services are 100% free to families. We are compensated by the community you choose,
-          allowing us to focus entirely on finding the perfect match for your needs.
-        </p>
-      </div>
-    </section>
+    </div>
+
+  </div>
+
+</section>
 
     <!-- 4 + 5 -->
     <section class="two-column">
@@ -1567,6 +1685,134 @@ document.addEventListener('DOMContentLoaded', function () {
     desktopViewport.addListener(
       closePanelAfterViewportChange
     );
+  }
+
+})();
+
+
+/* =========================================================
+   DESKTOP CARE OPTIONS
+========================================================= */
+
+(function () {
+
+  const desktopCareButton =
+    document.getElementById('desktopCareButton');
+
+  const desktopCarePanel =
+    document.getElementById('desktopCarePanel');
+
+  const desktopCareClose =
+    document.getElementById('desktopCareClose');
+
+  const desktopCareViewport =
+    window.matchMedia('(min-width: 761px)');
+
+
+  if (
+    !desktopCareButton ||
+    !desktopCarePanel ||
+    !desktopCareClose
+  ) {
+    return;
+  }
+
+
+  function setDesktopCarePanel(open) {
+
+    desktopCarePanel.classList.toggle(
+      'is-open',
+      open
+    );
+
+    desktopCarePanel.setAttribute(
+      'aria-hidden',
+      String(!open)
+    );
+
+    desktopCareButton.setAttribute(
+      'aria-expanded',
+      String(open)
+    );
+
+  }
+
+
+  desktopCareButton.addEventListener(
+    'click',
+    function () {
+
+      if (!desktopCareViewport.matches) {
+        return;
+      }
+
+      const shouldOpen =
+        !desktopCarePanel.classList.contains('is-open');
+
+      setDesktopCarePanel(shouldOpen);
+
+      if (shouldOpen) {
+
+        window.setTimeout(function () {
+
+          desktopCarePanel.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+        }, 100);
+
+      }
+
+    }
+  );
+
+
+  desktopCareClose.addEventListener(
+    'click',
+    function () {
+      setDesktopCarePanel(false);
+    }
+  );
+
+
+  document.addEventListener(
+    'keydown',
+    function (event) {
+
+      if (
+        event.key === 'Escape' &&
+        desktopCarePanel.classList.contains('is-open')
+      ) {
+        setDesktopCarePanel(false);
+      }
+
+    }
+  );
+
+
+  function closeCarePanelAfterViewportChange(event) {
+
+    if (!event.matches) {
+      setDesktopCarePanel(false);
+    }
+
+  }
+
+
+  if (desktopCareViewport.addEventListener) {
+
+    desktopCareViewport.addEventListener(
+      'change',
+      closeCarePanelAfterViewportChange
+    );
+
+  } else {
+
+    desktopCareViewport.addListener(
+      closeCarePanelAfterViewportChange
+    );
+
   }
 
 })();

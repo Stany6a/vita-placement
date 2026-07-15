@@ -2019,7 +2019,9 @@ body.menu-open {
     transform: translateY(30px);
   }
 }
-/* SMOOTH TEXT APPEARANCE */
+/* =========================================================
+   SMOOTH TEXT APPEARANCE
+========================================================= */
 
 .fade-in-text {
   opacity: 1;
@@ -2028,11 +2030,11 @@ body.menu-open {
 
 .js .fade-in-text {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(12px);
 
   transition:
-    opacity 1s ease,
-    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1.45s ease,
+    transform 1.45s cubic-bezier(0.16, 1, 0.3, 1);
 
   will-change: opacity, transform;
 }
@@ -2042,16 +2044,17 @@ body.menu-open {
   transform: translateY(0);
 }
 
-/* Slightly more delicate movement on mobile */
+
+/* MOBILE */
 
 @media (max-width: 760px) {
 
   .js .fade-in-text {
-    transform: translateY(14px);
+    transform: translateY(10px);
 
     transition:
-      opacity 0.9s ease,
-      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+      opacity 1.3s ease,
+      transform 1.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .js .fade-in-text.is-visible {
@@ -2059,7 +2062,8 @@ body.menu-open {
   }
 }
 
-/* Accessibility */
+
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
 

@@ -589,21 +589,28 @@ Turning local expertise into the right senior living shortlist
     </section>
     <!-- 6 + 7 -->
 <section class="two-column">
+
   <div class="image-block">
     <img
-  src="Block_6.png"
-  alt="Welcoming residential home representing board and care options"
->
+      src="Block_6.png"
+      alt="Welcoming residential home representing board and care options"
+    >
+  </div>
 
   <div class="text-block">
-    <h2>Turning local expertise into the right shortlist</h2>
+
+    <h2>
+      Turning local expertise into the right shortlist
+    </h2>
 
     <p>
       With extensive knowledge of local senior living communities, we narrow
       countless options into a focused shortlist tailored to your family's
       unique situation.
     </p>
+
   </div>
+
 </section>
    
 
@@ -1189,7 +1196,8 @@ const mobileMenuOverlay =
 const mobileMenuLinks =
   document.querySelectorAll(
     '.mobile-menu-links button[data-target]'
-  );let activeMenuTarget = null;
+  );
+  let activeMenuTarget = null;
 
 function setActiveMenuItem(target) {
   activeMenuTarget = target;
@@ -1424,14 +1432,38 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.fade-in-text');
 
   if (!('IntersectionObserver' in window)) {
-      animatedTextBlocks.forEach(function (element) {
+    animatedTextBlocks.forEach(function (element) {
+      element.classList.add('is-visible');
+    });
+
+    return;
+  }
+
+  const textObserver = new IntersectionObserver(
+    function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: '0px 0px -8% 0px'
+    }
+  );
+
+  animatedTextBlocks.forEach(function (element) {
     textObserver.observe(element);
   });
 });
-</script>
 
 
-<script>
+/* =========================================================
+   DESKTOP HOW IT WORKS
+========================================================= */
+
 (function () {
 
   const desktopHowButton =
@@ -1457,7 +1489,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   function setDesktopHowPanel(open) {
-
     desktopHowPanel.classList.toggle(
       'is-open',
       open
@@ -1472,14 +1503,12 @@ document.addEventListener('DOMContentLoaded', function () {
       'aria-expanded',
       String(open)
     );
-
   }
 
 
   desktopHowButton.addEventListener(
     'click',
     function () {
-
       if (!desktopViewport.matches) {
         return;
       }
@@ -1490,18 +1519,13 @@ document.addEventListener('DOMContentLoaded', function () {
       setDesktopHowPanel(shouldOpen);
 
       if (shouldOpen) {
-
         window.setTimeout(function () {
-
           desktopHowPanel.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           });
-
         }, 100);
-
       }
-
     }
   );
 
@@ -1517,43 +1541,36 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener(
     'keydown',
     function (event) {
-
       if (
         event.key === 'Escape' &&
         desktopHowPanel.classList.contains('is-open')
       ) {
         setDesktopHowPanel(false);
       }
-
     }
   );
 
 
   function closePanelAfterViewportChange(event) {
-
     if (!event.matches) {
       setDesktopHowPanel(false);
     }
-
   }
 
 
   if (desktopViewport.addEventListener) {
-
     desktopViewport.addEventListener(
       'change',
       closePanelAfterViewportChange
     );
-
   } else {
-
     desktopViewport.addListener(
       closePanelAfterViewportChange
     );
-
   }
 
 })();
+
 </script>
 
 </body>

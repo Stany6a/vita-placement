@@ -2221,9 +2221,6 @@ body.menu-open {
 
     background: #F1ECE5;
 
-    border-top: 1px solid rgba(95, 87, 76, 0.10);
-    border-bottom: 1px solid rgba(95, 87, 76, 0.10);
-
     opacity: 0;
     visibility: hidden;
 
@@ -2303,7 +2300,6 @@ body.menu-open {
   .desktop-how-item + .desktop-how-item {
     padding-left: 72px;
 
-    border-left: 1px solid rgba(95, 87, 76, 0.16);
   }
 
   .desktop-how-item h2 {

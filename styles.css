@@ -2845,4 +2845,226 @@ body.menu-open {
     display: none !important;
   }
 
+}/* =========================================================
+   DESKTOP LOCAL GUIDANCE
+   MATCHES OTHER DESKTOP ACCORDIONS
+========================================================= */
+
+.desktop-local-panel {
+  display: none;
+}
+
+
+@media (min-width: 761px) {
+
+  /* Button below the paragraph */
+
+  .desktop-local-intro .desktop-local-button {
+    align-self: flex-start;
+
+    width: fit-content;
+
+    margin-top: 3.6rem;
+    margin-right: auto;
+    margin-left: 0;
+  }
+
+
+  /* Collapsible panel */
+
+  .desktop-local-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    width: 100%;
+
+    background: #F1ECE5;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      grid-template-rows 0.7s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.45s ease,
+      visibility 0s linear 0.7s;
+  }
+
+
+  .desktop-local-panel.is-open {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+      grid-template-rows 0.7s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.45s ease,
+      visibility 0s linear 0s;
+  }
+
+
+  .desktop-local-shell {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+
+  .desktop-local-inner {
+    position: relative;
+
+    width: 80%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+    padding: 70px 0 78px;
+  }
+
+
+  /* Section label */
+
+  .desktop-local-label {
+    margin: 0 0 38px;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #756455;
+  }
+
+
+  /* Questions grid */
+
+  .desktop-local-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 72px;
+    row-gap: 58px;
+  }
+
+
+  .desktop-local-item {
+    min-width: 0;
+  }
+
+
+  .desktop-local-item h2 {
+    max-width: 470px;
+    margin: 0;
+
+    font-family:
+      Lato,
+      Arial,
+      sans-serif;
+
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    text-align: left;
+
+    color: #5F574C;
+  }
+
+
+  .desktop-local-item p {
+    max-width: 500px;
+    margin: 28px 0 0;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    text-align: left;
+
+    color: #555046;
+  }
+
+
+  /* Close button */
+
+  .desktop-local-close {
+    position: absolute;
+
+    top: 48px;
+    right: 0;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: #5F574C;
+
+    cursor: pointer;
+    opacity: 0.65;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  .desktop-local-close:hover {
+    opacity: 1;
+    transform: rotate(4deg);
+  }
+
+
+  .desktop-local-close:focus-visible {
+    outline: 1px solid rgba(95, 87, 76, 0.55);
+    outline-offset: 4px;
+  }
+
+}
+
+
+/* Mobile protection */
+
+@media (max-width: 760px) {
+
+  .desktop-local-button,
+  .desktop-local-panel {
+    display: none !important;
+  }
+
 }

@@ -3499,28 +3499,43 @@ body.menu-open {
     display: none !important;
   }
 
-}/* =========================================================
-   DESKTOP HERO MENU BUTTON POSITION
+/* =========================================================
+   DESKTOP HERO MENU BUTTON — FINAL POSITION
 ========================================================= */
 
 @media (min-width: 761px) {
 
+  /*
+    Hero-left остаётся в прежней сетке.
+    Кнопка позиционируется относительно него,
+    но не сдвигает заголовок и остальные элементы.
+  */
+
+  .hero-left {
+    position: relative;
+  }
+
+
   .hero-left .desktop-menu-btn {
-    position: static;
+    position: absolute;
 
-    display: flex;
-    flex-shrink: 0;
+    /*
+      58px — высота квадратной кнопки;
+      60px — расстояние от кнопки до заголовка,
+      равное отступу перед How It Works.
+    */
 
-    align-self: flex-start;
+    top: calc(-58px - 60px);
+    left: 0;
+
+    z-index: 30;
+
+    display: flex !important;
 
     width: 58px;
     height: 58px;
 
-    margin:
-      0
-      0
-      60px
-      0;
+    margin: 0;
 
     transform: none;
   }

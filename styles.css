@@ -2099,4 +2099,40 @@ body.menu-open {
     display: none !important;
   }
 
+}/* =========================================================
+   DESKTOP HERO DESCRIPTION
+   Mobile version remains unchanged
+========================================================= */
+
+@media (min-width: 761px) {
+
+  .hero-description {
+    display: block;
+
+    max-width: 470px;
+    margin: 22px 0 0;
+
+    font-family: "Avenir Light", "Avenir Next", sans-serif;
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.55;
+
+    color: #5F574C;
+  }
+
+  .hero-left .hero-button {
+    margin-top: 34px;
+  }
+
+}
+
+
+/* Keep the current mobile hero unchanged */
+
+@media (max-width: 760px) {
+
+  .hero-description {
+    display: none !important;
+  }
+
 }

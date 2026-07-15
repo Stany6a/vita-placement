@@ -3499,4 +3499,36 @@ body.menu-open {
     display: none !important;
   }
 
+}/* =========================================================
+   DESKTOP HERO MENU BUTTON POSITION
+========================================================= */
+
+@media (min-width: 761px) {
+
+  .hero-left .desktop-menu-btn {
+    position: static;
+
+    display: flex;
+    flex-shrink: 0;
+
+    align-self: flex-start;
+
+    width: 58px;
+    height: 58px;
+
+    margin:
+      0
+      0
+      60px
+      0;
+
+    transform: none;
+  }
+
+
+  .hero-left .desktop-menu-btn:hover,
+  .hero-left .desktop-menu-btn:active {
+    transform: translateY(-1px);
+  }
+
 }

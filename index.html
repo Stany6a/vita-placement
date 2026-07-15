@@ -801,7 +801,7 @@ Turning local expertise into the right senior living shortlist
 </section>
 
     <!-- 6 + 7 -->
-<section class="two-column">
+<section class="two-column desktop-local-intro">
 
   <div class="image-block">
     <img
@@ -812,15 +812,108 @@ Turning local expertise into the right senior living shortlist
 
   <div class="text-block">
 
-    <h2>
-      Turning local expertise into the right shortlist
-    </h2>
+  <h2>
+    Turning local expertise into the right senior living shortlist
+  </h2>
 
-    <p>
-      With extensive knowledge of local senior living communities, we narrow
-      countless options into a focused shortlist tailored to your family's
-      unique situation.
-    </p>
+  <p>
+    With extensive knowledge of local senior living communities,
+    we narrow countless options into a focused shortlist tailored
+    to your family’s unique situation.
+  </p>
+
+  <button
+    class="button desktop-local-button"
+    type="button"
+    id="desktopLocalButton"
+    aria-expanded="false"
+    aria-controls="desktopLocalPanel">
+    Explore Local Guidance
+  </button>
+
+</div>
+
+</section><!-- Desktop Local Guidance accordion -->
+<section
+  class="desktop-local-panel"
+  id="desktopLocalPanel"
+  aria-hidden="true">
+
+  <div class="desktop-local-shell">
+
+    <div class="desktop-local-inner">
+
+      <button
+        class="desktop-local-close"
+        type="button"
+        id="desktopLocalClose"
+        aria-label="Close Local Guidance section">
+        ×
+      </button>
+
+      <p class="desktop-local-label">
+        Local Guidance
+      </p>
+
+      <div class="desktop-local-grid">
+
+        <article class="desktop-local-item">
+
+          <h2>
+            What areas does Vita Placement Assistance serve?
+          </h2>
+
+          <p>
+            We primarily serve families in Irvine, Newport Beach,
+            Huntington Beach, Mission Viejo, Laguna Niguel, Anaheim,
+            Orange, Santa Ana, Costa Mesa, Tustin, Fullerton, Yorba Linda,
+            and surrounding Orange County communities and also assist
+            clients in neighboring communities across Southern California.
+            Our local knowledge allows us to recommend assisted living,
+            memory care, board and care homes, and other senior living
+            options that match your location, care needs, budget, and
+            lifestyle preferences.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-local-item">
+
+          <h2>
+            Do I need to visit every senior living community myself?
+          </h2>
+
+          <p>
+            No. Families do not need to contact or visit every senior
+            living community on their own. Vita Placement Assistance
+            narrows the search to suitable options based on your loved
+            one’s needs, preferences, location, and budget, helping you
+            focus on the communities most likely to be a good fit.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-local-item">
+
+          <h2>
+            Can Vita help arrange senior living tours?
+          </h2>
+
+          <p>
+            Yes. We help families coordinate tours of selected senior
+            living communities and prepare for the questions that are
+            important to ask. This makes it easier to compare care,
+            services, pricing, atmosphere, and availability before
+            making a decision.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -2055,6 +2148,132 @@ document.addEventListener('DOMContentLoaded', function () {
 
     desktopComplexViewport.addListener(
       closeComplexPanelAfterViewportChange
+    );
+
+  }
+
+})();/* =========================================================
+   DESKTOP LOCAL GUIDANCE
+========================================================= */
+
+(function () {
+
+  const desktopLocalButton =
+    document.getElementById('desktopLocalButton');
+
+  const desktopLocalPanel =
+    document.getElementById('desktopLocalPanel');
+
+  const desktopLocalClose =
+    document.getElementById('desktopLocalClose');
+
+  const desktopLocalViewport =
+    window.matchMedia('(min-width: 761px)');
+
+
+  if (
+    !desktopLocalButton ||
+    !desktopLocalPanel ||
+    !desktopLocalClose
+  ) {
+    return;
+  }
+
+
+  function setDesktopLocalPanel(open) {
+
+    desktopLocalPanel.classList.toggle(
+      'is-open',
+      open
+    );
+
+    desktopLocalPanel.setAttribute(
+      'aria-hidden',
+      String(!open)
+    );
+
+    desktopLocalButton.setAttribute(
+      'aria-expanded',
+      String(open)
+    );
+  }
+
+
+  desktopLocalButton.addEventListener(
+    'click',
+    function () {
+
+      if (!desktopLocalViewport.matches) {
+        return;
+      }
+
+      const shouldOpen =
+        !desktopLocalPanel.classList.contains(
+          'is-open'
+        );
+
+      setDesktopLocalPanel(shouldOpen);
+
+      if (shouldOpen) {
+
+        window.setTimeout(function () {
+
+          desktopLocalPanel.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+
+        }, 100);
+      }
+    }
+  );
+
+
+  desktopLocalClose.addEventListener(
+    'click',
+    function () {
+      setDesktopLocalPanel(false);
+    }
+  );
+
+
+  document.addEventListener(
+    'keydown',
+    function (event) {
+
+      if (
+        event.key === 'Escape' &&
+        desktopLocalPanel.classList.contains(
+          'is-open'
+        )
+      ) {
+        setDesktopLocalPanel(false);
+      }
+    }
+  );
+
+
+  function closeLocalPanelAfterViewportChange(
+    event
+  ) {
+
+    if (!event.matches) {
+      setDesktopLocalPanel(false);
+    }
+  }
+
+
+  if (desktopLocalViewport.addEventListener) {
+
+    desktopLocalViewport.addEventListener(
+      'change',
+      closeLocalPanelAfterViewportChange
+    );
+
+  } else {
+
+    desktopLocalViewport.addListener(
+      closeLocalPanelAfterViewportChange
     );
 
   }

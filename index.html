@@ -114,7 +114,20 @@
 
 <div class="hero-content">
 
- <button class="mobile-menu-btn" type="button" id="mobileMenuButton" aria-label="Open menu">
+ <button class="mobile-menu-btn" type="button"
+  id="mobileMenuButton"
+  aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+  <button
+  class="desktop-menu-btn"
+  type="button"
+  id="desktopMenuButton"
+  aria-label="Open menu"
+  aria-expanded="false"
+  aria-controls="desktopSideMenu">
   <span></span>
   <span></span>
   <span></span>
@@ -217,6 +230,15 @@
         </article>
 
       </div>
+      <button
+
+  class="desktop-back-to-menu"
+
+  type="button">
+
+  Back to Main Menu
+
+</button>
 
     </div>
 
@@ -229,7 +251,9 @@
 <div 
   class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-<nav class="mobile-side-menu" id="mobileSideMenu" aria-label="Mobile navigation">
+<nav class="mobile-side-menu"
+  id="mobileSideMenu"
+  aria-label="Mobile navigation">
 
   <button
     class="mobile-menu-close"
@@ -264,6 +288,66 @@
     <button
       type="button"
       class="mobile-menu-request js-open-request">
+      Request a Call
+    </button>
+
+  </div>
+
+</nav><!-- Desktop menu -->
+<div
+  class="desktop-menu-overlay"
+  id="desktopMenuOverlay">
+</div>
+
+<nav
+  class="desktop-side-menu"
+  id="desktopSideMenu"
+  aria-label="Desktop navigation"
+  aria-hidden="true">
+
+  <button
+    class="desktop-menu-close"
+    type="button"
+    id="desktopMenuClose"
+    aria-label="Close menu">
+    ×
+  </button>
+
+  <div class="desktop-menu-links">
+
+    <button
+      type="button"
+      data-desktop-target="service">
+      About the Service
+    </button>
+
+    <button
+      type="button"
+      data-desktop-target="care">
+      Care Options
+    </button>
+
+    <button
+      type="button"
+      data-desktop-target="pricing">
+      Pricing
+    </button>
+
+    <button
+      type="button"
+      data-desktop-target="areas">
+      Areas We Serve
+    </button>
+
+    <button
+      type="button"
+      data-desktop-target="contact">
+      Contact Us
+    </button>
+
+    <button
+      type="button"
+      class="desktop-menu-request js-open-request">
       Request a Call
     </button>
 
@@ -677,6 +761,15 @@ Turning local expertise into the right senior living shortlist
         </article>
 
       </div>
+      <button
+
+  class="desktop-back-to-menu"
+
+  type="button">
+
+  Back to Main Menu
+
+      </button>
 
     </div>
 
@@ -792,7 +885,15 @@ Turning local expertise into the right senior living shortlist
 
         </article>
 
-      </div>
+      </div><button
+
+  class="desktop-back-to-menu"
+
+  type="button">
+
+  Back to Main Menu
+
+</button>
 
     </div>
 
@@ -912,6 +1013,15 @@ Turning local expertise into the right senior living shortlist
         </article>
 
       </div>
+      <button
+
+  class="desktop-back-to-menu"
+
+  type="button">
+
+  Back to Main Menu
+
+</button>
 
     </div>
 

@@ -2389,6 +2389,457 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 })();
+  /* =========================================================
+   DESKTOP SIDE MENU
+========================================================= */
+
+(function () {
+
+  const desktopMenuViewport =
+    window.matchMedia('(min-width: 761px)');
+
+  const desktopMenuButton =
+    document.getElementById('desktopMenuButton');
+
+  const desktopMenuClose =
+    document.getElementById('desktopMenuClose');
+
+  const desktopMenuOverlay =
+    document.getElementById('desktopMenuOverlay');
+
+  const desktopSideMenu =
+    document.getElementById('desktopSideMenu');
+
+  const desktopMenuLinks =
+    document.querySelectorAll(
+      '.desktop-menu-links button[data-desktop-target]'
+    );
+
+  const desktopMenuRequest =
+    document.querySelector('.desktop-menu-request');
+
+  const desktopBackButtons =
+    document.querySelectorAll('.desktop-back-to-menu');
+
+
+  const desktopPanelMap = {
+
+    service: {
+      panel:
+        document.getElementById('desktopHowPanel'),
+
+      trigger:
+        document.getElementById('desktopHowButton'),
+
+      close:
+        document.getElementById('desktopHowClose')
+    },
+
+    care: {
+      panel:
+        document.getElementById('desktopCarePanel'),
+
+      trigger:
+        document.getElementById('desktopCareButton'),
+
+      close:
+        document.getElementById('desktopCareClose')
+    },
+
+    pricing: {
+      panel:
+        document.getElementById('desktopComplexPanel'),
+
+      trigger:
+        document.getElementById('desktopComplexButton'),
+
+      close:
+        document.getElementById('desktopComplexClose')
+    },
+
+    areas: {
+      panel:
+        document.getElementById('desktopLocalPanel'),
+
+      trigger:
+        document.getElementById('desktopLocalButton'),
+
+      close:
+        document.getElementById('desktopLocalClose')
+    }
+
+  };
+
+
+  if (
+    !desktopMenuButton ||
+    !desktopMenuClose ||
+    !desktopMenuOverlay ||
+    !desktopSideMenu
+  ) {
+    return;
+  }
+
+
+  function setDesktopMenuActive(target) {
+
+    desktopMenuLinks.forEach(function (menuItem) {
+
+      menuItem.classList.toggle(
+        'is-active',
+        menuItem.dataset.desktopTarget === target
+      );
+
+    });
+  }
+
+
+  function openDesktopMenu() {
+
+    if (!desktopMenuViewport.matches) {
+      return;
+    }
+
+    desktopSideMenu.classList.add('is-open');
+    desktopMenuOverlay.classList.add('is-open');
+
+    desktopSideMenu.setAttribute(
+      'aria-hidden',
+      'false'
+    );
+
+    desktopMenuButton.setAttribute(
+      'aria-expanded',
+      'true'
+    );
+
+    document.body.classList.add(
+      'desktop-menu-open'
+    );
+  }
+
+
+  function closeDesktopMenu() {
+
+    desktopSideMenu.classList.remove('is-open');
+    desktopMenuOverlay.classList.remove('is-open');
+
+    desktopSideMenu.setAttribute(
+      'aria-hidden',
+      'true'
+    );
+
+    desktopMenuButton.setAttribute(
+      'aria-expanded',
+      'false'
+    );
+
+    document.body.classList.remove(
+      'desktop-menu-open'
+    );
+  }
+
+
+  function setDesktopPanelOpen(item, open) {
+
+    if (
+      !item ||
+      !item.panel ||
+      !item.trigger
+    ) {
+      return;
+    }
+
+    item.panel.classList.toggle(
+      'is-open',
+      open
+    );
+
+    item.panel.setAttribute(
+      'aria-hidden',
+      String(!open)
+    );
+
+    item.trigger.setAttribute(
+      'aria-expanded',
+      String(open)
+    );
+  }
+
+
+  function closeAllDesktopPanels() {
+
+    Object.values(
+      desktopPanelMap
+    ).forEach(function (item) {
+
+      if (!item.panel) return;
+
+      setDesktopPanelOpen(item, false);
+
+      item.panel.classList.remove(
+        'opened-from-desktop-menu'
+      );
+
+    });
+  }
+
+
+  function openDesktopPanelFromMenu(target) {
+
+    const item =
+      desktopPanelMap[target];
+
+    if (
+      !item ||
+      !item.panel ||
+      !item.trigger
+    ) {
+      return;
+    }
+
+    setDesktopMenuActive(target);
+
+    closeDesktopMenu();
+    closeAllDesktopPanels();
+
+    item.panel.classList.add(
+      'opened-from-desktop-menu'
+    );
+
+    setDesktopPanelOpen(item, true);
+
+    window.setTimeout(function () {
+
+      item.panel.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+
+    }, 320);
+  }
+
+
+  desktopMenuButton.addEventListener(
+    'click',
+    openDesktopMenu
+  );
+
+
+  desktopMenuClose.addEventListener(
+    'click',
+    closeDesktopMenu
+  );
+
+
+  desktopMenuOverlay.addEventListener(
+    'click',
+    closeDesktopMenu
+  );
+
+
+  desktopMenuLinks.forEach(function (menuItem) {
+
+    menuItem.addEventListener(
+      'click',
+      function () {
+
+        const target =
+          menuItem.dataset.desktopTarget;
+
+        if (target === 'contact') {
+
+          setDesktopMenuActive(target);
+
+          closeDesktopMenu();
+          closeAllDesktopPanels();
+
+          const contactSection =
+            document.getElementById('contact');
+
+          if (!contactSection) {
+            return;
+          }
+
+          window.setTimeout(function () {
+
+            contactSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+
+          }, 320);
+
+          return;
+        }
+
+        openDesktopPanelFromMenu(target);
+      }
+    );
+
+  });
+
+
+  /*
+    Request a Call уже откроется существующим
+    обработчиком .js-open-request.
+    Здесь только закрываем меню.
+  */
+
+  if (desktopMenuRequest) {
+
+    desktopMenuRequest.addEventListener(
+      'click',
+      closeDesktopMenu
+    );
+  }
+
+
+  /*
+    При обычном открытии кнопкой на странице
+    Back to Main Menu не показываем.
+  */
+
+  Object.values(
+    desktopPanelMap
+  ).forEach(function (item) {
+
+    if (
+      !item.panel ||
+      !item.trigger
+    ) {
+      return;
+    }
+
+    item.trigger.addEventListener(
+      'click',
+      function () {
+
+        item.panel.classList.remove(
+          'opened-from-desktop-menu'
+        );
+      }
+    );
+
+
+    if (item.close) {
+
+      item.close.addEventListener(
+        'click',
+        function () {
+
+          item.panel.classList.remove(
+            'opened-from-desktop-menu'
+          );
+        }
+      );
+    }
+
+  });
+
+
+  /*
+    Back to Main Menu:
+    закрываем текущий accordion,
+    затем снова открываем меню.
+  */
+
+  desktopBackButtons.forEach(function (button) {
+
+    button.addEventListener(
+      'click',
+      function () {
+
+        const currentPanel =
+          button.closest(
+            '#desktopHowPanel, ' +
+            '#desktopCarePanel, ' +
+            '#desktopComplexPanel, ' +
+            '#desktopLocalPanel'
+          );
+
+        if (!currentPanel) {
+          return;
+        }
+
+        const currentItem =
+          Object.values(
+            desktopPanelMap
+          ).find(function (item) {
+
+            return item.panel === currentPanel;
+          });
+
+
+        if (!currentItem) {
+          return;
+        }
+
+        setDesktopPanelOpen(
+          currentItem,
+          false
+        );
+
+        currentPanel.classList.remove(
+          'opened-from-desktop-menu'
+        );
+
+        window.setTimeout(function () {
+          openDesktopMenu();
+        }, 180);
+      }
+    );
+
+  });
+
+
+  document.addEventListener(
+    'keydown',
+    function (event) {
+
+      if (
+        event.key === 'Escape' &&
+        desktopSideMenu.classList.contains(
+          'is-open'
+        )
+      ) {
+        closeDesktopMenu();
+      }
+    }
+  );
+
+
+  function closeMenuAfterViewportChange(
+    event
+  ) {
+
+    if (!event.matches) {
+      closeDesktopMenu();
+      closeAllDesktopPanels();
+    }
+  }
+
+
+  if (
+    typeof desktopMenuViewport.addEventListener ===
+    'function'
+  ) {
+
+    desktopMenuViewport.addEventListener(
+      'change',
+      closeMenuAfterViewportChange
+    );
+
+  } else {
+
+    desktopMenuViewport.addListener(
+      closeMenuAfterViewportChange
+    );
+
+  }
+
+})();
+  
 
 </script>
 

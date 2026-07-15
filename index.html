@@ -685,26 +685,121 @@ Turning local expertise into the right senior living shortlist
 </section>
 
     <!-- 4 + 5 -->
-    <section class="two-column">
-      <div class="text-block">
-        <h2>Making a complex process feel manageable</h2>
+<section class="two-column desktop-complex-intro">
 
-        <p>
-          We simplify the search for senior living and care options so families can focus on what matters most.
-        </p>
+  <div class="text-block">
 
-        <button class="button text-button learn-more-btn" type="button" >
-    Learn More
-</button>
+    <h2>
+      Making the senior care search feel manageable
+    </h2>
+
+    <p>
+      We simplify the search for senior living and care options so families
+      can focus on what matters most.
+    </p>
+
+    <button
+      class="button desktop-complex-button"
+      type="button"
+      id="desktopComplexButton"
+      aria-expanded="false"
+      aria-controls="desktopComplexPanel">
+      Learn More
+    </button>
+
+  </div>
+
+  <div class="image-block">
+    <img
+      src="Block_5.png"
+      alt="Laptop and notebook used to compare senior living options"
+    >
+  </div>
+
+</section>
+
+<!-- Desktop Senior Care Guidance accordion -->
+<section
+  class="desktop-complex-panel"
+  id="desktopComplexPanel"
+  aria-hidden="true">
+
+  <div class="desktop-complex-shell">
+
+    <div class="desktop-complex-inner">
+
+      <button
+        class="desktop-complex-close"
+        type="button"
+        id="desktopComplexClose"
+        aria-label="Close Senior Care Guidance section">
+        ×
+      </button>
+
+      <p class="desktop-complex-label">
+        Senior Care Guidance
+      </p>
+
+      <div class="desktop-complex-grid">
+
+        <article class="desktop-complex-item">
+
+          <h2>
+            How do I know which senior care option is right?
+          </h2>
+
+          <p>
+            The right senior care option depends on the person’s daily support
+            needs, medical and cognitive condition, preferred environment,
+            location, and budget. Vita Placement Assistance helps families
+            compare local assisted living, memory care, board and care, and
+            other senior living options throughout Southern California.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-complex-item">
+
+          <h2>
+            Is senior placement assistance really free for families?
+          </h2>
+
+          <p>
+            Yes. Vita Placement Assistance is 100% free to families. We are
+            compensated by the senior living community after a successful
+            placement, so families do not pay a fee for our guidance,
+            recommendations, or help arranging tours.
+          </p>
+
+        </article>
+
+
+        <article class="desktop-complex-item desktop-complex-item-wide">
+
+          <h2>
+            How much do assisted living, memory care, and board and care homes cost?
+          </h2>
+
+          <p>
+            Senior living costs vary based on the type of care, location,
+            room style, level of assistance, and services included. Assisted
+            living, memory care, and board and care homes may each use different
+            pricing structures. Vita Placement Assistance helps families
+            understand these costs, compare options, and identify communities
+            that fit their care needs and budget.
+          </p>
+
+        </article>
+
       </div>
 
-      <div class="image-block">
-        <img
-  src="Block_5.png"
-  alt="Laptop and notebook used to compare senior living options"
->
-      </div>
-    </section>
+    </div>
+
+  </div>
+
+</section>
+
     <!-- 6 + 7 -->
 <section class="two-column">
 
@@ -1815,7 +1910,110 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }
 
-})();
+  /* =========================================================
+     DESKTOP SENIOR CARE GUIDANCE ACCORDION
+  ========================================================= */
+
+  (() => {
+
+    const desktopComplexButton =
+      document.getElementById('desktopComplexButton');
+
+    const desktopComplexPanel =
+      document.getElementById('desktopComplexPanel');
+
+    const desktopComplexClose =
+      document.getElementById('desktopComplexClose');
+
+    if (
+      !desktopComplexButton ||
+      !desktopComplexPanel ||
+      !desktopComplexClose
+    ) {
+      return;
+    }
+
+    const desktopComplexViewport =
+      window.matchMedia('(min-width: 761px)');
+
+    function openDesktopComplexPanel() {
+
+      if (!desktopComplexViewport.matches) {
+        return;
+      }
+
+      desktopComplexPanel.classList.add('is-open');
+      desktopComplexPanel.setAttribute('aria-hidden', 'false');
+      desktopComplexButton.setAttribute('aria-expanded', 'true');
+
+      window.setTimeout(() => {
+        desktopComplexPanel.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 60);
+    }
+
+    function closeDesktopComplexPanel() {
+
+      desktopComplexPanel.classList.remove('is-open');
+      desktopComplexPanel.setAttribute('aria-hidden', 'true');
+      desktopComplexButton.setAttribute('aria-expanded', 'false');
+    }
+
+    desktopComplexButton.addEventListener('click', function () {
+
+      if (!desktopComplexViewport.matches) {
+        return;
+      }
+
+      const panelIsOpen =
+        desktopComplexPanel.classList.contains('is-open');
+
+      if (panelIsOpen) {
+        closeDesktopComplexPanel();
+      } else {
+        openDesktopComplexPanel();
+      }
+    });
+
+    desktopComplexClose.addEventListener(
+      'click',
+      closeDesktopComplexPanel
+    );
+
+    document.addEventListener('keydown', function (event) {
+
+      if (
+        event.key === 'Escape' &&
+        desktopComplexPanel.classList.contains('is-open')
+      ) {
+        closeDesktopComplexPanel();
+      }
+    });
+
+    function closeComplexPanelAfterViewportChange(event) {
+
+      if (!event.matches) {
+        closeDesktopComplexPanel();
+      }
+    }
+
+    if (
+      typeof desktopComplexViewport.addEventListener ===
+      'function'
+    ) {
+      desktopComplexViewport.addEventListener(
+        'change',
+        closeComplexPanelAfterViewportChange
+      );
+    } else {
+      desktopComplexViewport.addListener(
+        closeComplexPanelAfterViewportChange
+      );
+    }
+
+  })();
 
 </script>
 

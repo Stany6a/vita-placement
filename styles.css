@@ -2187,4 +2187,220 @@ body.menu-open {
     display: none !important;
   }
 
+}/* =========================================================
+   DESKTOP HOW IT WORKS PANEL
+   Completely separate from mobile
+========================================================= */
+
+.desktop-how-panel {
+  display: none;
+}
+
+
+@media (min-width: 761px) {
+
+  /* Show desktop button, hide existing mobile button */
+
+  .hero-left .desktop-how-button {
+    display: inline-flex !important;
+  }
+
+  .hero-left .mobile-how-button {
+    display: none !important;
+  }
+
+
+  /* Collapsible desktop panel */
+
+  .desktop-how-panel {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    width: 100%;
+
+    background: #F1ECE5;
+
+    border-top: 1px solid rgba(95, 87, 76, 0.10);
+    border-bottom: 1px solid rgba(95, 87, 76, 0.10);
+
+    opacity: 0;
+    visibility: hidden;
+
+    scroll-margin-top: 0;
+
+    transition:
+      grid-template-rows 0.7s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.45s ease,
+      visibility 0s linear 0.7s;
+  }
+
+  .desktop-how-panel.is-open {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+      grid-template-rows 0.7s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.45s ease,
+      visibility 0s linear 0s;
+  }
+
+  .desktop-how-shell {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .desktop-how-inner {
+    position: relative;
+
+    width: 80%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+    padding: 70px 0 76px;
+  }
+
+
+  /* Small section label */
+
+  .desktop-how-label {
+    margin: 0 0 38px;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #756455;
+  }
+
+
+  /* Two answers */
+
+  .desktop-how-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 72px;
+  }
+
+  .desktop-how-item {
+    min-width: 0;
+  }
+
+  .desktop-how-item + .desktop-how-item {
+    padding-left: 72px;
+
+    border-left: 1px solid rgba(95, 87, 76, 0.16);
+  }
+
+  .desktop-how-item h2 {
+    max-width: 470px;
+    margin: 0;
+
+    font-family: Lato, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    color: #5F574C;
+  }
+
+  .desktop-how-item p {
+    max-width: 500px;
+    margin: 28px 0 0;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    color: #555046;
+  }
+
+
+  /* Close button */
+
+  .desktop-how-close {
+    position: absolute;
+
+    top: 48px;
+    right: 0;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: #5F574C;
+
+    cursor: pointer;
+
+    opacity: 0.65;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .desktop-how-close:hover {
+    opacity: 1;
+    transform: rotate(4deg);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE PROTECTION
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .hero-left .desktop-how-button {
+    display: none !important;
+  }
+
+  .desktop-how-panel {
+    display: none !important;
+  }
+
 }

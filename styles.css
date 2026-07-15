@@ -2869,4 +2869,174 @@ body.menu-open {
     transform: none;
   }
 
+}/* =========================================================
+   DESKTOP SENIOR CARE GUIDANCE — FINAL STYLE MATCH
+========================================================= */
+
+@media (min-width: 761px) {
+
+  /*
+    Ставим маленький заголовок и крестик
+    в одну общую строку.
+  */
+
+  .desktop-complex-inner {
+    display: grid;
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      auto;
+
+    grid-template-areas:
+      "label close"
+      "content content";
+
+    column-gap: 24px;
+    row-gap: clamp(30px, 3vw, 44px);
+  }
+
+
+  .desktop-complex-label {
+    grid-area: label;
+
+    align-self: center;
+
+    margin: 0;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+  }
+
+
+  .desktop-complex-close {
+    grid-area: close;
+
+    position: static;
+
+    align-self: center;
+
+    margin: 0;
+    transform: none;
+
+    transition:
+      opacity 0.3s ease;
+  }
+
+
+  .desktop-complex-close:hover {
+    opacity: 1;
+    transform: none;
+  }
+
+
+  .desktop-complex-grid {
+    grid-area: content;
+  }
+
+
+  /*
+    Размер вопросов — как в существующем
+    Care Options accordion.
+  */
+
+  .desktop-complex-item h2 {
+    font-family:
+      "Lato",
+      Arial,
+      sans-serif;
+
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.18;
+  }
+
+
+  /*
+    Размер и шрифт ответов — как в старом accordion.
+  */
+
+  .desktop-complex-item p {
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.45;
+
+    color: #555046;
+  }
+
+}/* Thin close icon for the new desktop accordion */
+
+@media (min-width: 761px) {
+
+  .desktop-complex-close {
+    position: relative;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    font-size: 0;
+    line-height: 1;
+
+    opacity: 0.72;
+    transform: none;
+
+    transition: opacity 0.3s ease;
+  }
+
+
+  .desktop-complex-close::before,
+  .desktop-complex-close::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 22px;
+    height: 1px;
+
+    background: currentColor;
+
+    transform-origin: center;
+  }
+
+
+  .desktop-complex-close::before {
+    transform:
+      translate(-50%, -50%)
+      rotate(45deg);
+  }
+
+
+  .desktop-complex-close::after {
+    transform:
+      translate(-50%, -50%)
+      rotate(-45deg);
+  }
+
+
+  .desktop-complex-close:hover {
+    opacity: 1;
+    transform: none;
+  }
+
 }

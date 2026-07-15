@@ -3067,4 +3067,437 @@ body.menu-open {
     display: none !important;
   }
 
+}/* =========================================================
+   DESKTOP SIDE MENU
+========================================================= */
+
+/* По умолчанию desktop menu скрыто */
+.desktop-menu-btn,
+.desktop-menu-overlay,
+.desktop-side-menu {
+  display: none;
+}
+
+
+@media (min-width: 761px) {
+
+  /* ---------------------------------------------------------
+     HAMBURGER BUTTON
+  --------------------------------------------------------- */
+
+  .desktop-menu-btn {
+    position: absolute;
+
+    top: 48px;
+    left: 5%;
+
+    z-index: 30;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0;
+    padding: 0;
+
+    gap: 5px;
+
+    border: none;
+    border-radius: 0;
+
+    background: rgba(255, 250, 242, 0.62);
+
+    box-shadow:
+      0 3px 12px rgba(95, 87, 76, 0.08);
+
+    cursor: pointer;
+
+    transition:
+      background 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  .desktop-menu-btn:hover,
+  .desktop-menu-btn:active {
+    background: rgba(255, 250, 242, 0.74);
+
+    box-shadow:
+      0 7px 20px rgba(95, 87, 76, 0.12);
+
+    transform: translateY(-1px);
+  }
+
+
+  .desktop-menu-btn span {
+    width: 22px;
+    height: 2px;
+
+    background: #5F574C;
+    border-radius: 2px;
+  }
+
+
+  .desktop-menu-btn:focus-visible {
+    outline: 1px solid rgba(95, 87, 76, 0.55);
+    outline-offset: 5px;
+  }
+
+
+  /* ---------------------------------------------------------
+     PAGE OVERLAY
+  --------------------------------------------------------- */
+
+  .desktop-menu-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+
+    display: block;
+
+    background: rgba(70, 62, 52, 0.24);
+
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      opacity 0.35s ease,
+      visibility 0s linear 0.35s;
+  }
+
+
+  .desktop-menu-overlay.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+      opacity 0.35s ease,
+      visibility 0s linear 0s;
+  }
+
+
+  /* ---------------------------------------------------------
+     SIDE PANEL
+  --------------------------------------------------------- */
+
+  .desktop-side-menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    z-index: 110;
+
+    display: block;
+
+    width: min(520px, 78vw);
+    height: 100vh;
+    height: 100dvh;
+
+    padding:
+      clamp(105px, 11vh, 140px)
+      clamp(54px, 5vw, 76px)
+      70px;
+
+    overflow-y: auto;
+
+    background: #F5F2EC;
+
+    box-shadow:
+      -14px 0 40px rgba(73, 53, 40, 0.10);
+
+    transform: translateX(100%);
+
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+      transform 0.55s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear 0.55s;
+  }
+
+
+  .desktop-side-menu.is-open {
+    transform: translateX(0);
+
+    visibility: visible;
+    pointer-events: auto;
+
+    transition:
+      transform 0.55s cubic-bezier(.22, 1, .36, 1),
+      visibility 0s linear 0s;
+  }
+
+
+  /* ---------------------------------------------------------
+     MENU CLOSE
+  --------------------------------------------------------- */
+
+  .desktop-menu-close {
+    position: absolute;
+
+    top: 46px;
+    right: clamp(48px, 5vw, 70px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: #5F574C;
+
+    opacity: 0.68;
+    cursor: pointer;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  .desktop-menu-close:hover {
+    opacity: 1;
+    transform: rotate(4deg);
+  }
+
+
+  /* ---------------------------------------------------------
+     MENU LINKS
+  --------------------------------------------------------- */
+
+  .desktop-menu-links {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+
+  .desktop-menu-links button {
+    position: relative;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 27px 16px;
+
+    border: none;
+    border-bottom: 1px solid rgba(73, 53, 40, 0.13);
+
+    background: transparent;
+
+    color: #5F574C;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.25;
+
+    letter-spacing: 0.12em;
+    text-align: left;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+      background 0.25s ease,
+      padding-left 0.25s ease;
+  }
+
+
+  .desktop-menu-links button:hover {
+    background: rgba(232, 224, 211, 0.50);
+  }
+
+
+  /* Посещённый пункт */
+
+  .desktop-menu-links button.is-active {
+    padding-left: 48px;
+
+    background: rgba(232, 224, 211, 0.68);
+  }
+
+
+  .desktop-menu-links button.is-active::before {
+    content: "▸";
+
+    position: absolute;
+
+    top: 50%;
+    left: 18px;
+
+    transform: translateY(-50%);
+
+    color: #756455;
+
+    font-size: 15px;
+    line-height: 1;
+  }
+
+
+  /* Request a Call */
+
+  .desktop-menu-links .desktop-menu-request {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 66px;
+
+    margin-top: 40px;
+    padding: 18px 28px;
+
+    border: none;
+
+    background: rgba(232, 224, 211, 0.72);
+
+    text-align: center;
+
+    box-shadow:
+      0 3px 12px rgba(95, 87, 76, 0.07);
+
+    transition:
+      background 0.25s ease,
+      box-shadow 0.25s ease,
+      transform 0.25s ease;
+  }
+
+
+  .desktop-menu-links .desktop-menu-request:hover {
+    padding-left: 28px;
+
+    background: rgba(232, 224, 211, 0.88);
+
+    box-shadow:
+      0 7px 20px rgba(95, 87, 76, 0.11);
+
+    transform: translateY(-1px);
+  }
+
+
+  .desktop-menu-links .desktop-menu-request::before {
+    content: none;
+  }
+
+
+  /* ---------------------------------------------------------
+     BACK TO MAIN MENU
+  --------------------------------------------------------- */
+
+  .desktop-back-to-menu {
+    display: none;
+
+    width: fit-content;
+
+    margin: 52px 0 0;
+    padding: 4px 0 6px;
+
+    border: none;
+    border-bottom: 1px solid rgba(95, 87, 76, 0.35);
+
+    background: transparent;
+
+    color: #756455;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.2;
+
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    transition:
+      color 0.25s ease,
+      border-color 0.25s ease;
+  }
+
+
+  .desktop-back-to-menu:hover {
+    color: #5F574C;
+    border-color: #5F574C;
+  }
+
+
+  #desktopHowPanel.opened-from-desktop-menu
+    .desktop-back-to-menu,
+
+  #desktopCarePanel.opened-from-desktop-menu
+    .desktop-back-to-menu,
+
+  #desktopComplexPanel.opened-from-desktop-menu
+    .desktop-back-to-menu,
+
+  #desktopLocalPanel.opened-from-desktop-menu
+    .desktop-back-to-menu {
+    display: inline-flex;
+  }
+
+
+  body.desktop-menu-open {
+    overflow: hidden;
+  }
+
+}
+
+
+/* Mobile protection */
+
+@media (max-width: 760px) {
+
+  .desktop-menu-btn,
+  .desktop-menu-overlay,
+  .desktop-side-menu,
+  .desktop-back-to-menu {
+    display: none !important;
+  }
+
 }

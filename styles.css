@@ -2400,3 +2400,200 @@ body.menu-open {
   }
 
 }
+/* =========================================================
+   DESKTOP CARE OPTIONS BUTTON AND PANEL
+   Does not affect mobile
+========================================================= */
+
+.desktop-care-panel {
+  display: none;
+}
+
+
+@media (min-width: 761px) {
+
+  /* Button below the paragraph */
+
+  .desktop-care-intro .desktop-care-button {
+    align-self: flex-start;
+    margin-top: 3.6rem;
+  }
+
+
+  /* Collapsible panel */
+
+  .desktop-care-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+
+    width: 100%;
+
+    background: #F1ECE5;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+      grid-template-rows 0.7s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.45s ease,
+      visibility 0s linear 0.7s;
+  }
+
+  .desktop-care-panel.is-open {
+    grid-template-rows: 1fr;
+
+    opacity: 1;
+    visibility: visible;
+
+    transition:
+      grid-template-rows 0.7s cubic-bezier(.22, 1, .36, 1),
+      opacity 0.45s ease,
+      visibility 0s linear 0s;
+  }
+
+  .desktop-care-shell {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .desktop-care-inner {
+    position: relative;
+
+    width: 80%;
+    max-width: 1120px;
+
+    margin: 0 auto;
+    padding: 70px 0 78px;
+  }
+
+
+  /* Section label */
+
+  .desktop-care-label {
+    margin: 0 0 38px;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+
+    color: #756455;
+  }
+
+
+  /* Four questions in a 2 × 2 grid */
+
+  .desktop-care-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 72px;
+    row-gap: 58px;
+  }
+
+  .desktop-care-item {
+    min-width: 0;
+  }
+
+  .desktop-care-item h2 {
+    max-width: 470px;
+    margin: 0;
+
+    font-family: Lato, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    color: #5F574C;
+  }
+
+  .desktop-care-item p {
+    max-width: 500px;
+    margin: 28px 0 0;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.5;
+
+    color: #555046;
+  }
+
+
+  /* Close button */
+
+  .desktop-care-close {
+    position: absolute;
+
+    top: 48px;
+    right: 0;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+    border: none;
+
+    font-family:
+      "Avenir Light",
+      Avenir,
+      "Helvetica Neue",
+      Helvetica,
+      Arial,
+      sans-serif;
+
+    font-size: 34px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: #5F574C;
+
+    cursor: pointer;
+    opacity: 0.65;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .desktop-care-close:hover {
+    opacity: 1;
+    transform: rotate(4deg);
+  }
+
+}
+
+
+/* Mobile protection */
+
+@media (max-width: 760px) {
+
+  .desktop-care-button,
+  .desktop-care-panel {
+    display: none !important;
+  }
+
+}

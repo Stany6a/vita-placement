@@ -3535,14 +3535,3 @@ body.menu-open {
   }
 
 }
-
-
-/* Защита мобильной версии */
-
-@media (max-width: 760px) {
-
-  .desktop-menu-btn {
-    display: none !important;
-  }
-
-}

@@ -3500,33 +3500,22 @@ body.menu-open {
   }
 
 /* =========================================================
-   DESKTOP HERO MENU BUTTON — FINAL POSITION
+   DESKTOP HERO MENU BUTTON — EXACT POSITION
 ========================================================= */
 
 @media (min-width: 761px) {
-
-  /*
-    Hero-left остаётся в прежней сетке.
-    Кнопка позиционируется относительно него,
-    но не сдвигает заголовок и остальные элементы.
-  */
 
   .hero-left {
     position: relative;
   }
 
+  .hero-left > .desktop-menu-btn {
+    position: absolute !important;
 
-  .hero-left .desktop-menu-btn {
-    position: absolute;
-
-    /*
-      58px — высота квадратной кнопки;
-      60px — расстояние от кнопки до заголовка,
-      равное отступу перед How It Works.
-    */
-
-    top: calc(-58px - 60px);
-    left: 0;
+    top: -118px !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
 
     z-index: 30;
 
@@ -3535,15 +3524,25 @@ body.menu-open {
     width: 58px;
     height: 58px;
 
-    margin: 0;
+    margin: 0 !important;
 
     transform: none;
   }
 
-
-  .hero-left .desktop-menu-btn:hover,
-  .hero-left .desktop-menu-btn:active {
+  .hero-left > .desktop-menu-btn:hover,
+  .hero-left > .desktop-menu-btn:active {
     transform: translateY(-1px);
+  }
+
+}
+
+
+/* Защита мобильной версии */
+
+@media (max-width: 760px) {
+
+  .desktop-menu-btn {
+    display: none !important;
   }
 
 }
